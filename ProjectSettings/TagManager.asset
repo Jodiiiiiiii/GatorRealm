@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Body
+    uniqueID: 1568815641
+    locked: 0
+  - name: Pants
+    uniqueID: 2075730641
+    locked: 0
+  - name: Shoes
+    uniqueID: 2542740861
+    locked: 0
+  - name: Shirt
+    uniqueID: 219213417
+    locked: 0
+  - name: Face
+    uniqueID: 602000657
+    locked: 0
+  - name: Hair
+    uniqueID: 4239655807
+    locked: 0
