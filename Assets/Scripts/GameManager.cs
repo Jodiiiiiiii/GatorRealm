@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     }
     private SaveData _data;
 
+    // private variables
+    private int _currentCharacterIndex = -1; // none selected by default
+
     #region UNITY METHODS
     private void Awake() // called each time a scene is loaded/reloaded
     {
@@ -78,12 +81,12 @@ public class GameManager : MonoBehaviour
 
     #region DATA MODIFIERS
     /// <summary>
-    /// useful for modifying stats of a particular character
+    /// gets currently selected character; used to modify current character
     /// </summary>
-    public CharacterData GetCharacter(int index)
+    public CharacterData GetCharacter()
     {
-        if (_data.CharacterCount > index && index >= 0) // input validation
-            return _data.Characters[index];
+        if (_data.CharacterCount > _currentCharacterIndex && _currentCharacterIndex >= 0) // input validation
+            return _data.Characters[_currentCharacterIndex];
 
         // invalid index
         Debug.LogError("Invalid index for Characters array");
@@ -95,8 +98,14 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void AddCharacter()
     {
+        _currentCharacterIndex = _data.CharacterCount;
         _data.Characters[_data.CharacterCount] = new CharacterData();
         _data.CharacterCount++;
+    }
+
+    public void SetCurrentCharacterIndex(int index)
+    {
+        _currentCharacterIndex = index;
     }
     #endregion
 
