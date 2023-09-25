@@ -296,6 +296,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShoesUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 639592690}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &33619070
 GameObject:
@@ -728,6 +740,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShoesUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 639592690}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &68668346
 GameObject:
@@ -908,6 +932,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1370,6 +1406,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckHairUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1760286194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1967,6 +2015,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2915,6 +2975,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckPantsUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &373332420
 GameObject:
@@ -3125,6 +3197,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckHairUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1760286194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4267,6 +4351,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &594816618
 GameObject:
@@ -4361,6 +4457,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckPantsUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4463,6 +4571,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &604635357
 GameObject:
@@ -4557,6 +4677,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShoesUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 639592690}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4866,6 +4998,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckPantsUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5351,6 +5495,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckFaceUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1598347391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &706584478
 GameObject:
@@ -5584,21 +5740,21 @@ MonoBehaviour:
   _bodyOutlineSprite: {fileID: 21300000, guid: 9ce2b95477277ff44b830be8d4634f22, type: 3}
   _bodyFillSprite: {fileID: 21300000, guid: 247c81fa0aa550c46b5f4edbb4b366de, type: 3}
   _hairOutlines:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cf99d955b509138449b2bbe2aea4031f, type: 3}
   - {fileID: 21300000, guid: b2c160dd50ea7bc47bee20f84df95d03, type: 3}
   - {fileID: 21300000, guid: ac1c38e62525a244d9d62b5650bc1417, type: 3}
   - {fileID: 21300000, guid: fad36aa76f218114d863fa63bd1e8f98, type: 3}
   - {fileID: 21300000, guid: 0442316bea117364196b376e0fa8447c, type: 3}
   - {fileID: 21300000, guid: cedc8ebd5bc7d814685db0a1a59872e9, type: 3}
   _hairFills:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cf99d955b509138449b2bbe2aea4031f, type: 3}
   - {fileID: 21300000, guid: 73f499831fb2a0940b590513ecda9ba2, type: 3}
   - {fileID: 21300000, guid: 283c7f84caaa09546b66511455ae6212, type: 3}
   - {fileID: 21300000, guid: d8ec6cd15df709941b1abb8d35112d18, type: 3}
   - {fileID: 21300000, guid: f10f82e1f93f73641b4521b15414343c, type: 3}
   - {fileID: 21300000, guid: 540cfb998dcbb384fab88c5393e27f4d, type: 3}
   _faceOutlines:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cf99d955b509138449b2bbe2aea4031f, type: 3}
   - {fileID: 21300000, guid: b7157360d6f7b0a49a1184e1f4a01a06, type: 3}
   - {fileID: 21300000, guid: 078c671e61165c04195082770cedfc50, type: 3}
   - {fileID: 21300000, guid: 8e9e1945433db65458648145ef8fade2, type: 3}
@@ -5643,14 +5799,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5af2f21fe21416c42a04faa90f74d21b, type: 3}
   - {fileID: 21300000, guid: b6c7676c24300f64d850472b0b8bf5b6, type: 3}
   _shoeOutlines:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cf99d955b509138449b2bbe2aea4031f, type: 3}
   - {fileID: 21300000, guid: 46eaef04f3cc97b40916866ae14218e6, type: 3}
   - {fileID: 21300000, guid: 31f618bc7b584f342af2ef192be460f5, type: 3}
   - {fileID: 21300000, guid: b521bfefd7453bb4da3e834c45cc11e3, type: 3}
   - {fileID: 21300000, guid: 7e665ac8715e80e41b968a2cb10f4c01, type: 3}
   - {fileID: 21300000, guid: f0421bdebe9d3cd44bdf6658b79742e5, type: 3}
   _shoeFills:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cf99d955b509138449b2bbe2aea4031f, type: 3}
   - {fileID: 21300000, guid: 94149450befe88341afef71936295470, type: 3}
   - {fileID: 21300000, guid: 7f4537b9a30d1a84aae899bd399829ba, type: 3}
   - {fileID: 21300000, guid: ba2020e5f4658a8428f63531898c7ff8, type: 3}
@@ -5906,6 +6062,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckHairUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1760286194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &799456315
 GameObject:
@@ -6112,6 +6280,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckFaceUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1598347391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6578,6 +6758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &963836175
 GameObject:
@@ -6812,6 +7004,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckFaceUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1598347391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &996551956
 GameObject:
@@ -6992,6 +7196,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckFaceUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1598347391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7379,6 +7595,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckPantsUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7782,6 +8010,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShirtUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8334,6 +8574,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckFaceUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1598347391}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1315878125
 GameObject:
@@ -8620,6 +8872,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckPantsUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10143,7 +10407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 0
+  m_AllowSwitchOff: 1
 --- !u!1 &1623524240
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,6 +11298,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShoesUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 639592690}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1735528046
 GameObject:
@@ -11204,6 +11480,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckShoesUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 639592690}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12108,6 +12396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckHairUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1760286194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1909791824
 GameObject:
@@ -12279,6 +12579,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: CheckHairUntoggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1760286194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
