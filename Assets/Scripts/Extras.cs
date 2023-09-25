@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Extras
 {
+    [System.Serializable]
     public class CharacterData
     {
         // Identification

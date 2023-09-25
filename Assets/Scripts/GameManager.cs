@@ -66,7 +66,11 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start() // only called once (at program boot-up)
-    {    }
+    {
+        // TEMP - workaround without character select screen
+        _data.CharacterCount = 1;
+        _currentCharacterIndex = 0;
+    }
 
     private void Update()
     {    }
