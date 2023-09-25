@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             }
             else // default save file configuration
             {
-                _data.CharacterCount = 0;
+                _data.CharacterCount = 1; // SHOULD BE 0 IN THE FUTURE (workaround for no character select screen)
                 _data.Characters = new CharacterData[MAX_CHARACTERS];
             }
 
@@ -91,10 +91,9 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// creates new blank character
+    /// creates new blank character; useful when creating new blank character
     /// </summary>
-    /// <param name="characterToAdd"></param>
-    public void AddCharacter(CharacterData characterToAdd)
+    public void AddCharacter()
     {
         _data.Characters[_data.CharacterCount] = new CharacterData();
         _data.CharacterCount++;

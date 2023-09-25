@@ -6,6 +6,10 @@ namespace Extras
 {
     public class CharacterData
     {
+        // Identification
+        public string Name = "Nameless";
+        public string Class = "No Class";
+
         // Visual Data
         public int HairType = 0;
         public int HairColor = 0xFFFFFF;
