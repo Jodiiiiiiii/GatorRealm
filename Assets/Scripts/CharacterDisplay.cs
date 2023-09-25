@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterDisplay : MonoBehaviour
 {
+    [Header("Text Components")]
+    [SerializeField] private TextMeshProUGUI _nameText;
+    [SerializeField] private TextMeshProUGUI _classText;
+
     [Header("Image Components")]
     [SerializeField] private Image _bodyOutline;
     [SerializeField] private Image _bodyFill;
@@ -32,6 +37,10 @@ public class CharacterDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // update text
+        _nameText.text = GameManager.Instance.GetCharacter().Name;
+        _classText.text = GameManager.Instance.GetCharacter().Class;
+
         // update outline/fill sprites to current stored values
         _hairOutline.sprite = _hairOutlines[GameManager.Instance.GetCharacter().HairType];
         _hairFill.sprite = _hairFills[GameManager.Instance.GetCharacter().HairType];

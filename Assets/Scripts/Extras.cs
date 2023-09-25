@@ -8,8 +8,8 @@ namespace Extras
     public class CharacterData
     {
         // Identification
-        public string Name = "Nameless";
-        public string Class = "No Class";
+        public string Name = "~ Nameless ~";
+        public string Class = "~ Generalist Archetype ~";
 
         // Visual Data
         public int HairType = 0;

@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             }
             else // default save file configuration
             {
-                _data.CharacterCount = 1; // SHOULD BE 0 IN THE FUTURE (workaround for no character select screen)
+                _data.CharacterCount = 0;
                 _data.Characters = new CharacterData[MAX_CHARACTERS];
             }
 
@@ -62,18 +62,13 @@ public class GameManager : MonoBehaviour
             // TEMP - workaround without character select screen
             _data.CharacterCount = 1;
             _currentCharacterIndex = 0;
+            _data.Characters[0] = new CharacterData();
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
-    private void Start() // only called once (at program boot-up)
-    {    }
-
-    private void Update()
-    {    }
 
     private void OnApplicationQuit()
     {
@@ -94,7 +89,7 @@ public class GameManager : MonoBehaviour
 
         // invalid index
         Debug.LogError("Invalid index for Characters array");
-        return new CharacterData(); // default CharacterData
+        return null; // default CharacterData
     }
 
     /// <summary>
