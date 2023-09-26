@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenuButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartButton()   // Loads the character select screen
     {
-        
+        // TODO: Add a scene transition effect
+        SceneManager.LoadScene(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CreditsButton()
     {
-        
+
+    }
+
+    public void CreditsBackButton()
+    {
+
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
 }
