@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
     private SaveData _data;
 
     // private variables
-    private int _currentCharacterIndex = -1; // none selected by default
+    private int _currentCharacterIndex = -1; // None selected by default
+    private bool _goingToNext = true;        // Controls the direction of the scene transition effect
 
     #region UNITY METHODS
     private void Awake() // called each time a scene is loaded/reloaded
@@ -105,6 +106,16 @@ public class GameManager : MonoBehaviour
     public void SetCurrentCharacterIndex(int index)
     {
         _currentCharacterIndex = index;
+    }
+
+    public bool GetTransitionDirection()
+    {
+        return _goingToNext;
+    }
+
+    public void SetTransitionDirection(bool next)
+    {
+        _goingToNext = next;
     }
     #endregion
 
