@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             _data.CharacterCount = 1;
             _currentCharacterIndex = 0;
             _data.Characters[0] = new CharacterData();
+
         }
         else
         {

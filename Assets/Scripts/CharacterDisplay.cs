@@ -6,6 +6,13 @@ using TMPro;
 
 public class CharacterDisplay : MonoBehaviour
 {
+    // In selection mode, we need each display to be static to its own index and associated clothes
+    // Whereas in creation mode, the clothes can change based on the character index in the GameManager
+    private enum DisplayMode { Selection, Creation};
+    [Header("Display Mode")]
+    [SerializeField] private DisplayMode displayMode = DisplayMode.Selection;
+    private bool loaded;
+
     [Header("Text Components")]
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _classText;
@@ -32,10 +39,26 @@ public class CharacterDisplay : MonoBehaviour
     {
         _bodyOutline.sprite = _bodyOutlineSprite;
         _bodyFill.sprite = _bodyFillSprite;
+        loaded = false;
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if(displayMode == DisplayMode.Selection && !loaded)
+        {
+            loaded = true;
+            UpdateCharacterModel();
+        }
+
+        if (displayMode == DisplayMode.Creation)
+        {
+            UpdateCharacterModel();
+        }
+
+    }
+
+    private void UpdateCharacterModel()
     {
         // update text
         _nameText.text = GameManager.Instance.GetCharacter().Name;

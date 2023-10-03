@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelectButtons : MonoBehaviour
 {
-    [SerializeField] ScreenTransition screenTransition;
+    private ScreenTransition screenTransition;
+
+    private void Start()
+    {
+        screenTransition = FindObjectOfType<ScreenTransition>();
+    }
     public void BackButton()
     {
         StopAllCoroutines();
@@ -27,6 +32,7 @@ public class CharacterSelectButtons : MonoBehaviour
 
     private IEnumerator DoNewChara()
     {
+        GameManager.Instance.AddCharacter();
         screenTransition.GoToNextScene();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(2);
