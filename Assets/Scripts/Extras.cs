@@ -43,5 +43,10 @@ namespace Extras
                 Mathf.InverseLerp(0, 255, colorInt >> 8 & 0x0000FF),
                 Mathf.InverseLerp(0, 255, colorInt & 0x0000FF), 1);
         }
+
+        public static int ColorToInt(Color color)
+        {
+            return (int)(color.r * 255) << 16 | (int)(color.g * 255) << 8 | (int)(color.b * 255);
+        }
     }
 }
