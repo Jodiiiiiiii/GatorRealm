@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
     private SaveData _data;
 
     // private variables
-    private int _selectedCharacterIndex = -1; // none selected by default
+    // first character selected unless otherwise specified
+    private int _selectedCharacterIndex = 0;
 
     #region UNITY METHODS
     private void Awake() // called each time a scene is loaded/reloaded
@@ -54,15 +55,14 @@ public class GameManager : MonoBehaviour
             {
                 _data.CharacterCount = 0;
                 _data.Characters = new CharacterData[MAX_CHARACTERS];
+#if UNITY_EDITOR
+                // prevents crash when starting editor from CharacterCreation scene with no existing .json file
+                _data.Characters[0] = new CharacterData();
+#endif
             }
 
             // components
             _audioSource = GetComponent<AudioSource>();
-
-            // TEMP - workaround without character select screen
-            _data.CharacterCount = 1;
-            _selectedCharacterIndex = 0;
-            _data.Characters[0] = new CharacterData();
         }
         else
         {
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
             return _data.Characters[index];
 
         // invalid index
-        Debug.Log("GetCharacter(index): Invalid character index input");
+        Debug.LogError("GetCharacter(index): Invalid character index input");
         return new CharacterData(); // default CharacterData
     }
 
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
             _data.CharacterCount++;
         }
         else
-            Debug.Log("AddCharacter: max capacity; unable to add character");
+            Debug.LogError("AddCharacter: max capacity; unable to add character");
     }
 
     /// <summary>
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
             _data.CharacterCount--;
         }
         else
-            Debug.Log("RemoveCharacter(index): Invalid character index input");
+            Debug.LogError("RemoveCharacter(index): Invalid character index input");
     }
 
     /// <summary>
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
         if (index >= 0 && index < MAX_CHARACTERS)
             _selectedCharacterIndex = index;
         else
-            Debug.Log("SetCurrentCharacterIndex(index): Invalid character index input");
+            Debug.LogError("SetCurrentCharacterIndex(index): Invalid character index input");
     }
     #endregion
 
