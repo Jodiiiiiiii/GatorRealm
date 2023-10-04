@@ -9,12 +9,28 @@ public class CharacterPanelManager : MonoBehaviour
     [SerializeField] private GameObject newButtonPrefab;
     [SerializeField] private Transform parentCanvas;
 
+    [SerializeField] private FadeUI raycastBlocker1;
+    [SerializeField] private FadeUI raycastBlocker2;
+
     private bool loaded = false;
 
-    // Start is called before the first frame update
+    private void OnEnable()
+    {
+        CharacterSelectButtons.onDetailPanelOpen += FadeInBlocker1;
+        CharacterSelectButtons.onDetailPanelClose += FadeOutBlocker1;
+    }
+
+    private void OnDisable()
+    {
+        CharacterSelectButtons.onDetailPanelOpen -= FadeInBlocker1;
+        CharacterSelectButtons.onDetailPanelClose -= FadeOutBlocker1;
+    }
+
     void Start()
     {
         loaded = false;
+        raycastBlocker1.gameObject.SetActive(false);
+        raycastBlocker2.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +41,28 @@ public class CharacterPanelManager : MonoBehaviour
             StartCoroutine(DoSpawnPanels());
             loaded = true;
         }
+    }
+
+    private void FadeInBlocker1()
+    {
+        raycastBlocker1.gameObject.SetActive(true);
+        raycastBlocker1.UIFadeIn();
+    }
+
+    private void FadeInBlocker2()
+    {
+        raycastBlocker2.gameObject.SetActive(true);
+        raycastBlocker2.UIFadeIn();
+    }
+
+    private void FadeOutBlocker1()
+    {
+        raycastBlocker1.UIFadeOut();
+    }
+
+    private void FadeOutBlocker2()
+    {
+        raycastBlocker2.UIFadeOut();
     }
 
     private IEnumerator DoSpawnPanels()

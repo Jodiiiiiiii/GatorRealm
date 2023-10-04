@@ -378,13 +378,14 @@ GameObject:
   - component: {fileID: 402514612}
   - component: {fileID: 402514611}
   - component: {fileID: 402514610}
+  - component: {fileID: 402514613}
   m_Layer: 5
-  m_Name: Detail Screen Raycast Blocker
+  m_Name: Blocker1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &402514609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402514608}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -455,6 +456,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402514608}
   m_CullTransparentMesh: 1
+--- !u!114 &402514613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402514608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d75a94afd2691848a3bf6fe9ebd9765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494830520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,13 +1103,14 @@ GameObject:
   - component: {fileID: 1138906095}
   - component: {fileID: 1138906094}
   - component: {fileID: 1138906093}
+  - component: {fileID: 1138906096}
   m_Layer: 5
-  m_Name: Delete Window Raycast Blocker
+  m_Name: Blocker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1138906092
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1125,7 +1139,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138906091}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1167,6 +1181,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138906091}
   m_CullTransparentMesh: 1
+--- !u!114 &1138906096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138906091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d75a94afd2691848a3bf6fe9ebd9765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209908472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,3 +2027,5 @@ MonoBehaviour:
   panelPrefab: {fileID: 7398384277774449062, guid: ee397939c14f12147ad70f821755dbb0, type: 3}
   newButtonPrefab: {fileID: 123758507641179797, guid: a85588d9112be0946873bed343073b66, type: 3}
   parentCanvas: {fileID: 1247767438}
+  raycastBlocker1: {fileID: 402514613}
+  raycastBlocker2: {fileID: 1138906096}

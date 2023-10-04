@@ -8,11 +8,22 @@ public class CharacterSelectButtons : MonoBehaviour
     private ScreenTransition screenTransition;
     private CharacterDetailScreen detailScreen;
 
+    public delegate void OnDetailPanelOpen();
+    public static event OnDetailPanelOpen onDetailPanelOpen;
+    public delegate void OnDetailPanelClose();
+    public static event OnDetailPanelClose onDetailPanelClose;
+
+    public delegate void OnDeletePanelOpen();
+    public static event OnDeletePanelOpen onDeletePanelOpen;
+    public delegate void OnDeletePanelClose();
+    public static event OnDeletePanelClose onDeletePanelClose;
+
     private void Start()
     {
         screenTransition = FindObjectOfType<ScreenTransition>();
-        detailScreen = FindObjectOfType<CharacterDetailScreen>();
+        detailScreen = FindObjectOfType<CharacterDetailScreen>();   
     }
+
     public void BackButton() // Goes back to the main menu
     {
         StopAllCoroutines();
@@ -28,12 +39,14 @@ public class CharacterSelectButtons : MonoBehaviour
     public void CharaDetailButton() // Pulls the detail window down
     {
         detailScreen.ShowPanel();
+        onDetailPanelOpen?.Invoke();
         //TODO: Fade in raycast blocker for back layer of buttons
     }
 
     public void CloseCharaDetailButton() // Pushes the detail window up
     {
         detailScreen.HidePanel();
+        onDetailPanelClose?.Invoke();
         //TODO: Fade out raycast blocker for back layer of buttons
     }
 
