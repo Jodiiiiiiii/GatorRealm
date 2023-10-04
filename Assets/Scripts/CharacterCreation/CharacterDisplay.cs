@@ -60,7 +60,6 @@ public class CharacterDisplay : MonoBehaviour
 
         // update fill colors based on color data
         _bodyFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().SkinColor);
-        Debug.Log("color: " + _bodyFill.color.r + " " + _bodyFill.color.g + " " + _bodyFill.color.b);
 
         _hairFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().HairColor);
 
