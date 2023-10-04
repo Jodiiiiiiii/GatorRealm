@@ -14,9 +14,6 @@ public class ButtonFunctionHelper : MonoBehaviour
     }
     public void UpdateClass(string classText) { GameManager.Instance.GetCharacter().Class = classText; }
 
-    // Untoggling Class
-    public void CheckClassUntoggle(ToggleGroup group) { if(!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().Class = "~ Generalist Archetype ~"; }
-
     // Setters
     public void SetHair(int val) { GameManager.Instance.GetCharacter().HairType = val; }
 
