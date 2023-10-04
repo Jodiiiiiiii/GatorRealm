@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     private SaveData _data;
 
     // private variables
-    private int _currentCharacterIndex = -1; // none selected by default
+    private int _selectedCharacterIndex = -1; // none selected by default
 
     #region UNITY METHODS
     private void Awake() // called each time a scene is loaded/reloaded
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
             // TEMP - workaround without character select screen
             _data.CharacterCount = 1;
-            _currentCharacterIndex = 0;
+            _selectedCharacterIndex = 0;
             _data.Characters[0] = new CharacterData();
         }
         else
@@ -80,31 +80,77 @@ public class GameManager : MonoBehaviour
 
     #region DATA MODIFIERS
     /// <summary>
-    /// gets currently selected character; used to modify current character
+    /// For CHARACTOR CREATION:
+    /// gets currently selected character;
+    /// used to modify/view current character data within CharacterCreation scene
     /// </summary>
     public CharacterData GetCharacter()
     {
-        if (_data.CharacterCount > _currentCharacterIndex && _currentCharacterIndex >= 0) // input validation
-            return _data.Characters[_currentCharacterIndex];
-
-        // invalid index
-        Debug.LogError("Invalid index for Characters array");
-        return null; // default CharacterData
+        // index already input validated elsewhere
+        return _data.Characters[_selectedCharacterIndex];
     }
 
     /// <summary>
-    /// creates new blank character; useful when creating new blank character
+    /// For CHARACTER SELECT: 
+    /// used to get any character (e.g. for CharacterSelect displays)
+    /// </summary>
+    /// <returns>Character at index</returns>
+    public CharacterData GetCharacter(int index)
+    {
+        if (index >= 0 && index < MAX_CHARACTERS)
+            return _data.Characters[index];
+
+        // invalid index
+        Debug.Log("GetCharacter(index): Invalid character index input");
+        return new CharacterData(); // default CharacterData
+    }
+
+    /// <summary>
+    /// For CHARACTER SELECT:
+    /// creates new blank character; call this when user adds new character in CharacterSelect
     /// </summary>
     public void AddCharacter()
     {
-        _currentCharacterIndex = _data.CharacterCount;
-        _data.Characters[_data.CharacterCount] = new CharacterData();
-        _data.CharacterCount++;
+        if (_data.CharacterCount < MAX_CHARACTERS)
+        {
+            // initialize character with new character data
+            _data.Characters[_data.CharacterCount] = new CharacterData();
+
+            _data.CharacterCount++;
+        }
+        else
+            Debug.Log("AddCharacter: max capacity; unable to add character");
     }
 
-    public void SetCurrentCharacterIndex(int index)
+    /// <summary>
+    /// For CHARACTER SELECT: 
+    /// call this to remove a specific index;
+    /// The result will shift remaining characters so only smallest possible indices are used
+    /// </summary>
+    public void RemoveCharacter(int index)
     {
-        _currentCharacterIndex = index;
+        if (index >= 0 && index < MAX_CHARACTERS)
+        {
+            // left shift characters to the right of removed index
+            for(int i = index; i < _data.CharacterCount-1; i++)
+                _data.Characters[i] = _data.Characters[i + 1];
+
+            _data.CharacterCount--;
+        }
+        else
+            Debug.Log("RemoveCharacter(index): Invalid character index input");
+    }
+
+    /// <summary>
+    /// For CHARACTER SELECT: 
+    /// call this to set currently selected index BEFORE loading into CharacterCreation scene
+    /// </summary>
+    public void SetSelectedCharacterIndex(int index)
+    {
+        if (index >= 0 && index < MAX_CHARACTERS)
+            _selectedCharacterIndex = index;
+        else
+            Debug.Log("SetCurrentCharacterIndex(index): Invalid character index input");
     }
     #endregion
 
