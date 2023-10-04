@@ -15,7 +15,7 @@ namespace Extras
         public int SkinColor = 0xFFFFFF;
         public int HairType = 0;
         public int HairColor = 0xFFFFFF;
-        public int FaceType = 0;
+        public int FaceType = 1;
         public int ShirtType = 0;
         public int ShirtColor1 = 0xFFFFFF;
         public int ShirtColor2 = 0xFFFFFF;
