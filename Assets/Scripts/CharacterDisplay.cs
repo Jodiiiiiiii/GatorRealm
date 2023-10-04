@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Extras;
 
 public class CharacterDisplay : MonoBehaviour
 {
@@ -58,6 +59,16 @@ public class CharacterDisplay : MonoBehaviour
         _shoeFill.sprite = _shoeFills[GameManager.Instance.GetCharacter().ShoesType];
 
         // update fill colors based on color data
-        // COLOR DATA NOT IMPLEMENTED
+        _bodyFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().SkinColor);
+        Debug.Log("color: " + _bodyFill.color.r + " " + _bodyFill.color.g + " " + _bodyFill.color.b);
+
+        _hairFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().HairColor);
+
+        _shirtFill1.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor1);
+        _shirtFill2.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor2);
+
+        _pantsFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().PantsColor);
+
+        _shoeFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShoesColor);
     }
 }

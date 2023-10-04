@@ -34,5 +34,24 @@ public class ButtonFunctionHelper : MonoBehaviour
     public void CheckShirtUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().ShirtType = 0; }
     public void CheckPantsUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().PantsType = 0; }
     public void CheckShoesUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().ShoesType = 0; }
+
+    // Color picking
+    [SerializeField] private ColorPickerInputHandler _colorPicker;
+
+    public void ColorPickerToggle(int colorIndex)
+    {
+        if(_colorPicker.GetColorIndex() != colorIndex || !_colorPicker.gameObject.activeSelf) // open new color picker window
+        {
+            _colorPicker.gameObject.SetActive(true);
+            _colorPicker.OpenNewPicker(colorIndex);
+
+            // add something here about setting position of color picker
+        }
+        else // close current color picker tab
+        {
+            _colorPicker.OpenNewPicker(-1); // set to none selected state
+            _colorPicker.gameObject.SetActive(false);
+        }
+    }
     #endregion
 }
