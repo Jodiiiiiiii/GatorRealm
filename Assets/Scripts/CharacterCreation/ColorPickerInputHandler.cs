@@ -48,26 +48,32 @@ public class ColorPickerInputHandler : MonoBehaviour
     {
         _colorIndex = colorIndex;
 
-        // set initial value of new color picker
+        // set initial value of new color picker - if still white, don't set color (avoids saturation 0 making color picker behave unintuitively)
         switch(colorIndex)
         {
             case 0: // skin color
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().SkinColor));
+                if(GameManager.Instance.GetCharacter().SkinColor != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().SkinColor));
                 break;
             case 1: // hair color
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().HairColor));
+                if (GameManager.Instance.GetCharacter().HairColor != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().HairColor));
                 break;
             case 2: // shirt color 1
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor1));
+                if (GameManager.Instance.GetCharacter().ShirtColor1 != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor1));
                 break;
             case 3: // shirt color 2
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor2));
+                if (GameManager.Instance.GetCharacter().ShirtColor2 != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor2));
                 break;
             case 4: // pants color
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().PantsColor));
+                if (GameManager.Instance.GetCharacter().PantsColor != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().PantsColor));
                 break;
             case 5: // shoes color
-                GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShoesColor));
+                if (GameManager.Instance.GetCharacter().ShoesColor != 0xFFFFFF)
+                    GetComponent<FlexibleColorPicker>().SetColor(HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShoesColor));
                 break;
             default: // none selected
                 break;
