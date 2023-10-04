@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     // private variables
     // first character selected unless otherwise specified
     private int _selectedCharacterIndex = 0;
+    private bool _transitionDir;
 
     #region UNITY METHODS
     private void Awake() // called each time a scene is loaded/reloaded
@@ -79,6 +80,11 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region DATA MODIFIERS
+    public int GetCharacterCount()
+    {
+        return _data.CharacterCount;
+    }
+
     /// <summary>
     /// For CHARACTOR CREATION:
     /// gets currently selected character;
@@ -159,6 +165,16 @@ public class GameManager : MonoBehaviour
     {
         // load new scene
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    public void SetTransitionDirection(bool dir)
+    {
+        _transitionDir = dir;
+    }
+
+    public bool GetTransitionDirection()
+    {
+        return _transitionDir;
     }
     #endregion
 

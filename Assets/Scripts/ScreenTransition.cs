@@ -12,8 +12,6 @@ public class ScreenTransition : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    
-
     void Start()
     {
         anim = GetComponent<Animator>();

@@ -6,23 +6,55 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectButtons : MonoBehaviour
 {
     private ScreenTransition screenTransition;
+    private CharacterDetailScreen detailScreen;
 
     private void Start()
     {
         screenTransition = FindObjectOfType<ScreenTransition>();
+        detailScreen = FindObjectOfType<CharacterDetailScreen>();
     }
-    public void BackButton()
+    public void BackButton() // Goes back to the main menu
     {
         StopAllCoroutines();
         StartCoroutine(DoBackToMain());
     }
 
-    public void NewCharaButton()
+    public void NewCharaButton() // Moves you on to the new character scene
     {
         StopAllCoroutines();
         StartCoroutine(DoNewChara());
     }
 
+    public void CharaDetailButton() // Pulls the detail window down
+    {
+        detailScreen.ShowPanel();
+        //TODO: Fade in raycast blocker for back layer of buttons
+    }
+
+    public void CloseCharaDetailButton() // Pushes the detail window up
+    {
+        detailScreen.HidePanel();
+        //TODO: Fade out raycast blocker for back layer of buttons
+    }
+
+    public void DeleteButton()  // Calls down the delete confirmation window
+    {
+        //TODO: Fade in raycast blocker for back two layers of buttons
+    }
+
+    public void DeleteConfirmationButton()  // Confirms and executes deletion procedures
+    {
+        // Play the screen transition effect
+        // Remove the character from the backend
+        // Reload the scene
+    }
+
+    public void DeleteDenialButton()    // Backs the delete window down, keeps character intact
+    {
+        //TODO: Fade out raycast blocker for back two layers of buttons
+    }
+
+    // Coroutines --------------------------------------------------
     private IEnumerator DoBackToMain()
     {
         screenTransition.GoToPrevScene();

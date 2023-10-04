@@ -29,17 +29,15 @@ public class CharacterPanelManager : MonoBehaviour
 
     private IEnumerator DoSpawnPanels()
     {
-        int onScreenCount = 0; // A running tally of how many character panels are currently displayed
-        GameManager.Instance.SetCurrentCharacterIndex(onScreenCount);
+        int onScreenCount = GameManager.Instance.GetCharacterCount(); // A running tally of how many character panels are currently displayed
 
-        while (GameManager.Instance.GetCharacter() != null) // While we can still get characters
-        {             
-            GameObject charaPanel = Instantiate(panelPrefab, new Vector3(spawnpoints[onScreenCount].position.x, spawnpoints[onScreenCount].position.y, spawnpoints[onScreenCount].position.z), Quaternion.Euler(Vector3.zero), parentCanvas);   // Create the panel at the right position
+        Debug.Log(GameManager.Instance.GetCharacterCount());
+        for (int i = 0; i < GameManager.Instance.GetCharacterCount(); i++) // While we can still get characters
+        {
+            GameManager.Instance.SetSelectedCharacterIndex(i);   // Sets the appropriate index for getting the next character
+            GameObject charaPanel = Instantiate(panelPrefab, new Vector3(spawnpoints[i].position.x, spawnpoints[i].position.y, spawnpoints[i].position.z), Quaternion.Euler(Vector3.zero), parentCanvas);   // Create the panel at the right position
             yield return new WaitForSeconds(.1f);                                           // While useful as a visual effect as well, a slight delay is actually necessary for the character display to update
-            charaPanel.GetComponent<CharacterPanel>().SetValues(onScreenCount);             // Give that panel the correct index for potential data retrieval
-            onScreenCount++;
-            GameManager.Instance.SetCurrentCharacterIndex(onScreenCount);   // Sets the appropriate index for getting the next character
-             
+            charaPanel.GetComponent<CharacterPanel>().SetValues(i);             // Give that panel the correct index for potential data retrieval
         }
 
         if(onScreenCount < 8) // If we have made less than 8 characters, spawn in the "make a new one" button
