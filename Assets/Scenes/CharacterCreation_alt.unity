@@ -2240,7 +2240,7 @@ GameObject:
   - component: {fileID: 275630973}
   - component: {fileID: 275630974}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Archetype Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2990,6 +2990,18 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: RemoveShirtIfRobe
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1672257182}
         m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
         m_MethodName: SetPants
@@ -3841,7 +3853,7 @@ GameObject:
   - component: {fileID: 516342398}
   - component: {fileID: 516342399}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Pants Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4637,6 +4649,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1672257182}
         m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: RemoveShirtIfRobe
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
         m_MethodName: SetPants
         m_Mode: 3
         m_Arguments:
@@ -4671,7 +4695,7 @@ GameObject:
   - component: {fileID: 603957569}
   - component: {fileID: 603957570}
   m_Layer: 5
-  m_Name: Option 6 Toggle
+  m_Name: Robe Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4763,6 +4787,18 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: DisablePantsToggleGroup
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 516342399}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5178,6 +5214,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1672257182}
         m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: RemoveShirtIfRobe
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
         m_MethodName: SetPants
         m_Mode: 3
         m_Arguments:
@@ -5289,7 +5337,7 @@ GameObject:
   - component: {fileID: 639592689}
   - component: {fileID: 639592690}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Shoes Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7759,6 +7807,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1672257182}
         m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: RemoveShirtIfRobe
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
         m_MethodName: SetPants
         m_Mode: 3
         m_Arguments:
@@ -9181,6 +9241,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1672257182}
         m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: RemoveShirtIfRobe
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1542165722}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.ToggleGroup, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
         m_MethodName: SetPants
         m_Mode: 3
         m_Arguments:
@@ -10342,7 +10414,7 @@ GameObject:
   - component: {fileID: 1542165721}
   - component: {fileID: 1542165722}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Shirt Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10690,7 +10762,7 @@ GameObject:
   - component: {fileID: 1598347390}
   - component: {fileID: 1598347391}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Face Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11623,7 +11695,7 @@ GameObject:
   - component: {fileID: 1760286193}
   - component: {fileID: 1760286194}
   m_Layer: 5
-  m_Name: Toggle Group
+  m_Name: Hair Toggle Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -32,6 +32,29 @@ public class ButtonFunctionHelper : MonoBehaviour
     public void CheckPantsUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().PantsType = 0; }
     public void CheckShoesUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().ShoesType = 0; }
 
+    // Robe button handling
+    // resets toggle given group - used to disable pants when robe selected
+    public void DisablePantsToggleGroup(ToggleGroup pantsGroup)
+    {
+        Toggle toggleToDisable = pantsGroup.GetFirstActiveToggle();
+        if (toggleToDisable != null)
+        {
+            toggleToDisable.SetIsOnWithoutNotify(false); // remove selected state of pants button
+            GameManager.Instance.GetCharacter().PantsType = 0; // remove pants visually
+        }
+    }
+
+    // remogves robe as shirt if any pants are selected
+    public void RemoveShirtIfRobe(ToggleGroup shirtGroup)
+    {
+        Toggle robeToggle = shirtGroup.GetFirstActiveToggle();
+        if (robeToggle != null && robeToggle.name == "Robe Toggle")
+        {
+            robeToggle.SetIsOnWithoutNotify(false); // removes selected state of robe button
+            GameManager.Instance.GetCharacter().ShirtType = 0; // removes robe visibly
+        }
+    }
+
     // Color picking
     [SerializeField] private ColorPickerInputHandler _colorPicker;
 
