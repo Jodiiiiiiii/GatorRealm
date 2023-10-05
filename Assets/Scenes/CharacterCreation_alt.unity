@@ -6094,6 +6094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6ed2cb3316f0c41bc4a59ede0acc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayMode: 1
   _nameText: {fileID: 207512935}
   _classText: {fileID: 825060942}
   _bodyOutline: {fileID: 2037016619}
