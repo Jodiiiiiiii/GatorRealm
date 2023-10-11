@@ -11636,6 +11636,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3ad8435e06eaa468f158aacbb8ee20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArchetypeToggles:
+  - {fileID: 189234904}
+  - {fileID: 706584480}
+  - {fileID: 68668348}
+  - {fileID: 996551958}
+  HairToggles:
+  - {fileID: 116831648}
+  - {fileID: 1940591901}
+  - {fileID: 787885374}
+  - {fileID: 1907046744}
+  - {fileID: 390146349}
+  FaceToggles:
+  - {fileID: 1005702646}
+  - {fileID: 667444022}
+  - {fileID: 981821337}
+  - {fileID: 823057366}
+  - {fileID: 1313780667}
+  ShirtToggles:
+  - {fileID: 1156184302}
+  - {fileID: 72575426}
+  - {fileID: 593519495}
+  - {fileID: 227393195}
+  - {fileID: 955820878}
+  - {fileID: 603957570}
+  PantsToggles:
+  - {fileID: 594816620}
+  - {fileID: 632493984}
+  - {fileID: 1396627831}
+  - {fileID: 369358531}
+  - {fileID: 1072078775}
+  ShoesToggles:
+  - {fileID: 604635359}
+  - {fileID: 1754088281}
+  - {fileID: 1733763428}
+  - {fileID: 31674635}
+  - {fileID: 61726034}
   _colorPicker: {fileID: 2146630502}
 --- !u!4 &1672257183
 Transform:

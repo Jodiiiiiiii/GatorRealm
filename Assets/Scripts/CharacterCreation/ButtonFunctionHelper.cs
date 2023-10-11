@@ -8,11 +8,28 @@ using Extras;
 public class ButtonFunctionHelper : MonoBehaviour
 {
     #region STEP 1: APPEARANCE
+
+    #region APPEARANCE: randomize
+    // constants
+    private const int NUM_ARCHETYPES = 4;
+    private const int NUM_TOGGLES_STD = 5;
+    private const int NUM_TOGGLES_SHIRT = 6;
+
+    // required for updating toggles after randomizing
+    [SerializeField] Toggle[] ArchetypeToggles = new Toggle[NUM_ARCHETYPES];
+    [SerializeField] Toggle[] HairToggles = new Toggle[NUM_TOGGLES_STD];
+    [SerializeField] Toggle[] FaceToggles = new Toggle[NUM_TOGGLES_STD];
+    [SerializeField] Toggle[] ShirtToggles = new Toggle[NUM_TOGGLES_SHIRT];
+    [SerializeField] Toggle[] PantsToggles = new Toggle[NUM_TOGGLES_STD];
+    [SerializeField] Toggle[] ShoesToggles = new Toggle[NUM_TOGGLES_STD];
+
     // Randomize button
     public void Randomize()
     {
+        int rand;
+
         // class
-        int rand = Random.Range(0, 4);
+        rand = Random.Range(0, 4);
         if (rand == 0)
             GameManager.Instance.GetCharacter().Class = "~ Generalist Archetype ~";
         else if(rand == 1)
@@ -21,16 +38,55 @@ public class ButtonFunctionHelper : MonoBehaviour
             GameManager.Instance.GetCharacter().Class = "~ Ranged Archetype ~";
         else
             GameManager.Instance.GetCharacter().Class = "~ Magic Archetype ~";
+        ArchetypeToggles[rand].SetIsOnWithoutNotify(true);
 
-        // cosmetics
-        GameManager.Instance.GetCharacter().HairType = Random.Range(0, 6);
-        GameManager.Instance.GetCharacter().FaceType = Random.Range(0, 6);
-        GameManager.Instance.GetCharacter().ShirtType = Random.Range(0, 7);
-        if (GameManager.Instance.GetCharacter().ShirtType == 6)
-            GameManager.Instance.GetCharacter().PantsType = 0;
+        // Hair
+        rand = Random.Range(0, 6);
+        GameManager.Instance.GetCharacter().HairType = rand;
+        if (rand > 0)
+            HairToggles[rand - 1].SetIsOnWithoutNotify(true);
         else
-            GameManager.Instance.GetCharacter().PantsType = Random.Range(0, 6);
-        GameManager.Instance.GetCharacter().ShoesType = Random.Range(0, 6);
+            HairToggles[0].group.SetAllTogglesOff();
+
+        // Face
+        rand = Random.Range(0, 6);
+        GameManager.Instance.GetCharacter().FaceType = rand;
+        if (rand > 0)
+            FaceToggles[rand - 1].SetIsOnWithoutNotify(true);
+        else
+            FaceToggles[0].group.SetAllTogglesOff();
+
+        // Shirt
+        rand = Random.Range(0, 7);
+        GameManager.Instance.GetCharacter().ShirtType = rand;
+        if (rand > 0)
+            ShirtToggles[rand - 1].SetIsOnWithoutNotify(true);
+        else
+            ShirtToggles[0].group.SetAllTogglesOff();
+
+        // Pants
+        if (rand == 6) // disable pants if robe is equipped as shirt
+        {
+            GameManager.Instance.GetCharacter().PantsType = 0;
+            PantsToggles[0].group.SetAllTogglesOff();
+        }
+        else // robe not equipped
+        {
+            rand = Random.Range(0, 6);
+            GameManager.Instance.GetCharacter().PantsType = rand;
+            if (rand > 0)
+                PantsToggles[rand - 1].SetIsOnWithoutNotify(true);
+            else
+                PantsToggles[0].group.SetAllTogglesOff();
+        }
+
+        // Shoes
+        rand = Random.Range(0, 6);
+        GameManager.Instance.GetCharacter().ShoesType = rand;
+        if (rand > 0)
+            ShoesToggles[rand - 1].SetIsOnWithoutNotify(true);
+        else
+            ShoesToggles[0].group.SetAllTogglesOff();
 
         // colors
         GameManager.Instance.GetCharacter().SkinColor = HelperFunctions.ColorToInt(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
@@ -40,7 +96,9 @@ public class ButtonFunctionHelper : MonoBehaviour
         GameManager.Instance.GetCharacter().PantsColor = HelperFunctions.ColorToInt(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
         GameManager.Instance.GetCharacter().ShoesColor = HelperFunctions.ColorToInt(new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
     }
+    #endregion
 
+    #region APPEARANCE: setters
     // Update text
     public void UpdateName(TMP_InputField name) {
         if (name.text.Length > 0) GameManager.Instance.GetCharacter().Name = "~ " + name.text + " ~";
@@ -58,7 +116,9 @@ public class ButtonFunctionHelper : MonoBehaviour
     public void SetPants(int val) { GameManager.Instance.GetCharacter().PantsType = val; }
 
     public void SetShoes(int val) { GameManager.Instance.GetCharacter().ShoesType = val; }
+    #endregion
 
+    #region APPEARANCE: button untoggling checks
     // Untoggling
     public void CheckHairUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().HairType = 0; }
     public void CheckFaceUntoggle(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().FaceType = 0; }
@@ -88,7 +148,9 @@ public class ButtonFunctionHelper : MonoBehaviour
             GameManager.Instance.GetCharacter().ShirtType = 0; // removes robe visibly
         }
     }
+    #endregion
 
+    #region APPEARANCE: color picker buttons
     // Color picking
     [SerializeField] private ColorPickerInputHandler _colorPicker;
 
@@ -110,5 +172,7 @@ public class ButtonFunctionHelper : MonoBehaviour
             _colorPicker.gameObject.SetActive(false);
         }
     }
+    #endregion
+
     #endregion
 }
