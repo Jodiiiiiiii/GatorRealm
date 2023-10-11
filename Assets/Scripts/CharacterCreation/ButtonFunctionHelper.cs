@@ -99,7 +99,10 @@ public class ButtonFunctionHelper : MonoBehaviour
             _colorPicker.gameObject.SetActive(true);
             _colorPicker.OpenNewPicker(colorIndex);
 
-            // add something here about setting position of color picker
+            // set position of color picker
+            RectTransform rect = _colorPicker.GetComponent<RectTransform>();
+            rect.localPosition = new Vector3(rect.localPosition.x, 
+                _colorPicker.GetComponent<ColorPickerPositionData>().GetYPos(colorIndex), rect.localPosition.z);
         }
         else // close current color picker tab
         {
