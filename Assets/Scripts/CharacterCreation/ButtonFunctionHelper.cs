@@ -153,11 +153,13 @@ public class ButtonFunctionHelper : MonoBehaviour
     #region APPEARANCE: color picker buttons
     // Color picking
     [SerializeField] private ColorPickerInputHandler _colorPicker;
+    [SerializeField] private GameObject _closeColorPickerButton;
 
-    public void ColorPickerToggle(int colorIndex)
+    public void EnableColorPicker(int colorIndex)
     {
         if(_colorPicker.GetColorIndex() != colorIndex || !_colorPicker.gameObject.activeSelf) // open new color picker window
         {
+            // activate color picker
             _colorPicker.gameObject.SetActive(true);
             _colorPicker.OpenNewPicker(colorIndex);
 
@@ -165,12 +167,17 @@ public class ButtonFunctionHelper : MonoBehaviour
             RectTransform rect = _colorPicker.GetComponent<RectTransform>();
             rect.localPosition = new Vector3(rect.localPosition.x, 
                 _colorPicker.GetComponent<ColorPickerPositionData>().GetYPos(colorIndex), rect.localPosition.z);
+
+            // activate button overlay to close color picker
+            _closeColorPickerButton.SetActive(true);
         }
-        else // close current color picker tab
-        {
-            _colorPicker.OpenNewPicker(-1); // set to none selected state
-            _colorPicker.gameObject.SetActive(false);
-        }
+    }
+
+    public void DisableColorPicker()
+    {
+        // disable color picker and close color picker button
+        _colorPicker.gameObject.SetActive(false);
+        _closeColorPickerButton.SetActive(false);
     }
     #endregion
 
