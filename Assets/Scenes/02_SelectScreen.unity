@@ -1050,8 +1050,8 @@ RectTransform:
   - {fileID: 1310510837}
   - {fileID: 1066613664}
   - {fileID: 1454680792}
-  - {fileID: 1614850835}
   - {fileID: 1830809544}
+  - {fileID: 1614850835}
   m_Father: {fileID: 334804262}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1741,7 +1741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614850835}
   m_Layer: 0
-  m_Name: Pt.7
+  m_Name: Pt.8
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1760,7 +1760,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 990659903}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1649618626
 GameObject:
@@ -1803,7 +1803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830809544}
   m_Layer: 0
-  m_Name: Pt.8
+  m_Name: Pt.7
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1822,7 +1822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 990659903}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899014297
 GameObject:
@@ -2022,8 +2022,8 @@ MonoBehaviour:
   - {fileID: 1310510837}
   - {fileID: 1066613664}
   - {fileID: 1454680792}
-  - {fileID: 1614850835}
   - {fileID: 1830809544}
+  - {fileID: 1614850835}
   panelPrefab: {fileID: 7398384277774449062, guid: ee397939c14f12147ad70f821755dbb0, type: 3}
   newButtonPrefab: {fileID: 123758507641179797, guid: a85588d9112be0946873bed343073b66, type: 3}
   parentCanvas: {fileID: 1247767438}
