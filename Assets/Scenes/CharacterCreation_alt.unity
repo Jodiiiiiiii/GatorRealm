@@ -14595,7 +14595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817903229866752808, guid: be04d7e301f33f64fbe4321b06a57434, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 817903229866752810, guid: be04d7e301f33f64fbe4321b06a57434, type: 3}
       propertyPath: onColorChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
