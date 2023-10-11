@@ -18,12 +18,16 @@ public class CharacterPanelManager : MonoBehaviour
     {
         CharacterSelectButtons.onDetailPanelOpen += FadeInBlocker1;
         CharacterSelectButtons.onDetailPanelClose += FadeOutBlocker1;
+        CharacterSelectButtons.onDeletePanelOpen += FadeInBlocker2;
+        CharacterSelectButtons.onDeletePanelClose += FadeOutBlocker2;
     }
 
     private void OnDisable()
     {
         CharacterSelectButtons.onDetailPanelOpen -= FadeInBlocker1;
         CharacterSelectButtons.onDetailPanelClose -= FadeOutBlocker1;
+        CharacterSelectButtons.onDeletePanelOpen -= FadeInBlocker2;
+        CharacterSelectButtons.onDeletePanelClose -= FadeOutBlocker2;
     }
 
     void Start()

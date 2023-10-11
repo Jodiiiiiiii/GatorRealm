@@ -7,6 +7,7 @@ public class CharacterSelectButtons : MonoBehaviour
 {
     private ScreenTransition screenTransition;
     private CharacterDetailScreen detailScreen;
+    private CharacterDetailScreen deleteScreen;
 
     public delegate void OnDetailPanelOpen();
     public static event OnDetailPanelOpen onDetailPanelOpen;
@@ -21,7 +22,8 @@ public class CharacterSelectButtons : MonoBehaviour
     private void Start()
     {
         screenTransition = FindObjectOfType<ScreenTransition>();
-        detailScreen = FindObjectOfType<CharacterDetailScreen>();   
+        detailScreen = GameObject.Find("Character Detail Panel").GetComponent<CharacterDetailScreen>();
+        deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<CharacterDetailScreen>();
     }
 
     public void BackButton() // Goes back to the main menu
@@ -40,31 +42,29 @@ public class CharacterSelectButtons : MonoBehaviour
     {
         detailScreen.ShowPanel();
         onDetailPanelOpen?.Invoke();
-        //TODO: Fade in raycast blocker for back layer of buttons
     }
 
     public void CloseCharaDetailButton() // Pushes the detail window up
     {
         detailScreen.HidePanel();
         onDetailPanelClose?.Invoke();
-        //TODO: Fade out raycast blocker for back layer of buttons
     }
 
     public void DeleteButton()  // Calls down the delete confirmation window
     {
-        //TODO: Fade in raycast blocker for back two layers of buttons
+        deleteScreen.ShowPanel();
+        onDeletePanelOpen?.Invoke();
     }
 
     public void DeleteConfirmationButton()  // Confirms and executes deletion procedures
     {
-        // Play the screen transition effect
-        // Remove the character from the backend
-        // Reload the scene
+        StartCoroutine(DoDeleteChara());
     }
 
     public void DeleteDenialButton()    // Backs the delete window down, keeps character intact
     {
-        //TODO: Fade out raycast blocker for back two layers of buttons
+        deleteScreen.HidePanel();
+        onDeletePanelClose?.Invoke();
     }
 
     // Coroutines --------------------------------------------------
@@ -73,6 +73,16 @@ public class CharacterSelectButtons : MonoBehaviour
         screenTransition.GoToPrevScene();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator DoDeleteChara()
+    {
+        screenTransition.GoToNextScene();
+        yield return new WaitForSeconds(1f);
+
+        // This is where we need to delete whatever character is currently selected from the backed
+
+        SceneManager.LoadScene(1);
     }
 
     private IEnumerator DoNewChara()
