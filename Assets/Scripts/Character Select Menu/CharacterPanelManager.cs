@@ -13,6 +13,7 @@ public class CharacterPanelManager : MonoBehaviour
     [SerializeField] private FadeUI raycastBlocker2;
 
     private bool loaded = false;
+    private int selectedIndex;  // The index of whatever character is currently being displayed on the detail panel
 
     private void OnEnable()
     {
@@ -45,6 +46,16 @@ public class CharacterPanelManager : MonoBehaviour
             StartCoroutine(DoSpawnPanels());
             loaded = true;
         }
+    }
+
+    public void SetSelectedIndex(int index)
+    {
+        selectedIndex = index;
+    }
+
+    public int GetSelectedIndex()
+    {
+        return selectedIndex;
     }
 
     private void FadeInBlocker1()

@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectButtons : MonoBehaviour
 {
     private ScreenTransition screenTransition;
-    private CharacterDetailScreen detailScreen;
-    private CharacterDetailScreen deleteScreen;
+    private CharacterPanelManager panelManager;
+    private PanelController detailScreen;
+    private PanelController deleteScreen;
 
     public delegate void OnDetailPanelOpen();
     public static event OnDetailPanelOpen onDetailPanelOpen;
@@ -22,8 +23,9 @@ public class CharacterSelectButtons : MonoBehaviour
     private void Start()
     {
         screenTransition = FindObjectOfType<ScreenTransition>();
-        detailScreen = GameObject.Find("Character Detail Panel").GetComponent<CharacterDetailScreen>();
-        deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<CharacterDetailScreen>();
+        panelManager = FindObjectOfType<CharacterPanelManager>();
+        detailScreen = GameObject.Find("Character Detail Panel").GetComponent<PanelController>();
+        deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<PanelController>();
     }
 
     public void BackButton() // Goes back to the main menu
@@ -40,6 +42,8 @@ public class CharacterSelectButtons : MonoBehaviour
 
     public void CharaDetailButton() // Pulls the detail window down
     {
+        // So, this also needs to tell the panel manager the index of whatever button we just clicked on
+        panelManager.SetSelectedIndex(GetComponentInParent<CharacterPanel>().GetIndex());
         detailScreen.ShowPanel();
         onDetailPanelOpen?.Invoke();
     }
@@ -81,6 +85,7 @@ public class CharacterSelectButtons : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // This is where we need to delete whatever character is currently selected from the backed
+        GameManager.Instance.RemoveCharacter(panelManager.GetSelectedIndex());
 
         SceneManager.LoadScene(1);
     }
