@@ -51,6 +51,7 @@ public class CharacterPanelManager : MonoBehaviour
     public void SetSelectedIndex(int index)
     {
         selectedIndex = index;
+        GameManager.Instance.SetSelectedCharacterIndex(selectedIndex);
     }
 
     public int GetSelectedIndex()
