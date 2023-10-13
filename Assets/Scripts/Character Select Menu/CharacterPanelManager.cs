@@ -12,6 +12,8 @@ public class CharacterPanelManager : MonoBehaviour
     [SerializeField] private FadeUI raycastBlocker1;
     [SerializeField] private FadeUI raycastBlocker2;
 
+    [SerializeField] private GameObject openingAnimBlocker; // This allows the opening animations for all the pannels to play out
+
     private bool loaded = false;
     private int selectedIndex;  // The index of whatever character is currently being displayed on the detail panel
 
@@ -36,6 +38,7 @@ public class CharacterPanelManager : MonoBehaviour
         loaded = false;
         raycastBlocker1.gameObject.SetActive(false);
         raycastBlocker2.gameObject.SetActive(false);
+        openingAnimBlocker.SetActive(true);
     }
 
     // Update is called once per frame
@@ -84,7 +87,7 @@ public class CharacterPanelManager : MonoBehaviour
     private IEnumerator DoSpawnPanels()
     {
         int onScreenCount = GameManager.Instance.GetCharacterCount(); // A running tally of how many character panels are currently displayed
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.8f);
         Debug.Log(GameManager.Instance.GetCharacterCount());
         for (int i = 0; i < GameManager.Instance.GetCharacterCount(); i++) // While we can still get characters
         {
@@ -98,6 +101,8 @@ public class CharacterPanelManager : MonoBehaviour
         {
             GameObject newCharaButton = Instantiate(newButtonPrefab, new Vector3(spawnpoints[onScreenCount].position.x, spawnpoints[onScreenCount].position.y, spawnpoints[onScreenCount].position.z), Quaternion.Euler(Vector3.zero), parentCanvas);    // Create the panel at the right position
         }
+        yield return new WaitForSeconds(.3f);
+        openingAnimBlocker.SetActive(false);
 
     }
 }

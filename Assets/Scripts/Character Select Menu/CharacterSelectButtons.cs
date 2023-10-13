@@ -10,6 +10,10 @@ public class CharacterSelectButtons : MonoBehaviour
     private PanelController detailScreen;
     private PanelController deleteScreen;
 
+    [SerializeField] private Animator buttonAnim;
+
+    private bool activeCoroutine;
+
     public delegate void OnDetailPanelOpen();
     public static event OnDetailPanelOpen onDetailPanelOpen;
     public delegate void OnDetailPanelClose();
@@ -27,6 +31,14 @@ public class CharacterSelectButtons : MonoBehaviour
         detailScreen = GameObject.Find("Character Detail Panel").GetComponent<PanelController>();
         deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<PanelController>();
     }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("It work");
+        
+    }
+
+    
 
     public void BackButton() // Goes back to the main menu
     {
@@ -71,6 +83,14 @@ public class CharacterSelectButtons : MonoBehaviour
         onDeletePanelClose?.Invoke();
     }
 
+    public void MouseOver()
+    {
+        if (buttonAnim != null && !activeCoroutine)
+        {
+           StartCoroutine(DoMouseOverAnim());
+        }
+    }
+
     // Coroutines --------------------------------------------------
     private IEnumerator DoBackToMain()
     {
@@ -96,5 +116,13 @@ public class CharacterSelectButtons : MonoBehaviour
         screenTransition.GoToNextScene();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(2);
+    }
+
+    private IEnumerator DoMouseOverAnim()
+    {
+        activeCoroutine = true;
+        buttonAnim.Play("PosterMouseOver", 0, 0);
+        yield return new WaitForSeconds(1f);
+        activeCoroutine = false;
     }
 }
