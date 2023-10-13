@@ -2182,6 +2182,8 @@ GameObject:
   - component: {fileID: 817903229866752812}
   - component: {fileID: 817903229866752813}
   - component: {fileID: 817903229866752810}
+  - component: {fileID: 5551498226661860750}
+  - component: {fileID: 5779725833146119030}
   m_Layer: 5
   m_Name: CustomColorPicker
   m_TagString: Untagged
@@ -2198,7 +2200,7 @@ RectTransform:
   m_GameObject: {fileID: 817903229866752808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 817903229868849287}
@@ -2318,7 +2320,7 @@ MonoBehaviour:
     dynamicMaterial: {fileID: 2100000, guid: d122a9ab83052a844bff54d706f46330, type: 2}
   hexInput: {fileID: 817903228693582627}
   modeDropdown: {fileID: 0}
-  mode: 3
+  mode: 1
   staticSpriteMain:
   - {fileID: 21300000, guid: 9eeaa26afcff5404d9a837ac9bf644d7, type: 3}
   - {fileID: 21300000, guid: 818f373e223bc044b95f83ad796bbec0, type: 3}
@@ -2331,7 +2333,19 @@ MonoBehaviour:
   multiInstance: 1
   onColorChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ColorPickerInputHandler, Assembly-CSharp
+        m_MethodName: UpdateColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   advancedSettings:
     mainStatic: 1
     r:
@@ -2355,6 +2369,40 @@ MonoBehaviour:
     a:
       range: {x: 0, y: 1}
       overrideStatic: 0
+--- !u!114 &5551498226661860750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817903229866752808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccf4f0d76280d9418a9544a267bd6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yPositions:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+--- !u!114 &5779725833146119030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817903229866752808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e065937f014cac4a830be91e399bf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorInput: {fileID: 817903228693582627}
 --- !u!1 &817903229868849284
 GameObject:
   m_ObjectHideFlags: 0
