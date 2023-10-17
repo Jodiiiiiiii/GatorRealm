@@ -38,8 +38,6 @@ public class CharacterSelectButtons : MonoBehaviour
         
     }
 
-    
-
     public void BackButton() // Goes back to the main menu
     {
         StopAllCoroutines();
@@ -59,6 +57,12 @@ public class CharacterSelectButtons : MonoBehaviour
         detailScreen.ShowPanel();
         onDetailPanelOpen?.Invoke();
     }
+
+    public void PlayButton()
+    {
+        StartCoroutine(DoPlay());
+    }
+
 
     public void CloseCharaDetailButton() // Pushes the detail window up
     {
@@ -97,6 +101,13 @@ public class CharacterSelectButtons : MonoBehaviour
         screenTransition.GoToPrevScene();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator DoPlay()
+    {
+        screenTransition.GoToNextScene();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3);
     }
 
     private IEnumerator DoDeleteChara()
