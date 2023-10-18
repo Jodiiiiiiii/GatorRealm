@@ -9,7 +9,8 @@ namespace Extras
     {
         // Identification
         public string Name = "~ Nameless ~";
-        public string Class = "~ Generalist Archetype ~";
+        public int Archetype = 0;
+        public string Class = "";
 
         // Visual Data
         public int SkinColor = 0xFFFFFF;
@@ -30,6 +31,7 @@ namespace Extras
         public float DiplomacyToAggression = 0.5f;
         public float EmpathyToRuthlessness = 0.5f;
         public float OptimismToPessimism = 0.5f;
+        public float MysticismToSkepticism = 0.5f;
     }
 
     public static class HelperFunctions
