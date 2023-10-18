@@ -30,15 +30,8 @@ public class ButtonFunctionHelper : MonoBehaviour
         int rand;
 
         // class
-        rand = Random.Range(0, 4);
-        if (rand == 0)
-            GameManager.Instance.GetCharacter().Class = "~ Generalist Archetype ~";
-        else if(rand == 1)
-            GameManager.Instance.GetCharacter().Class = "~ Melee Archetype ~";
-        else if(rand == 2)
-            GameManager.Instance.GetCharacter().Class = "~ Ranged Archetype ~";
-        else
-            GameManager.Instance.GetCharacter().Class = "~ Magic Archetype ~";
+        rand = Random.Range(0, 3);
+        GameManager.Instance.GetCharacter().Archetype = rand;
         ArchetypeToggles[rand].SetIsOnWithoutNotify(true);
 
         // Hair
@@ -105,7 +98,8 @@ public class ButtonFunctionHelper : MonoBehaviour
         if (name.text.Length > 0) GameManager.Instance.GetCharacter().Name = "~ " + name.text + " ~";
         else GameManager.Instance.GetCharacter().Name = "~ Nameless ~";
     }
-    public void UpdateClass(string classText) { GameManager.Instance.GetCharacter().Class = classText; }
+
+    public void SetArchetype(int archetypeIndex) { GameManager.Instance.GetCharacter().Archetype = archetypeIndex; }
 
     // Setters
     public void SetHair(int val) { GameManager.Instance.GetCharacter().HairType = val; }

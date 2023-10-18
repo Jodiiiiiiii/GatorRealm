@@ -63,7 +63,11 @@ public class CharacterDisplay : MonoBehaviour
     {
         // update text
         _nameText.text = GameManager.Instance.GetCharacter().Name;
-        _classText.text = GameManager.Instance.GetCharacter().Class;
+        int archetype = GameManager.Instance.GetCharacter().Archetype;
+        if (archetype == 0) _classText.text = "~ Melee Archetype ~";
+        else if (archetype == 1) _classText.text = "~ Ranged Archetype ~";
+        else if (archetype == 2) _classText.text = "~ Magic Archetype ~";
+        else _classText.text = "~ Unfathomable Entity ~";
 
         // update outline/fill sprites to current stored values
         _hairOutline.sprite = _hairOutlines[GameManager.Instance.GetCharacter().HairType];

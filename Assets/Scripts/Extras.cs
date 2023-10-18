@@ -9,7 +9,7 @@ namespace Extras
     {
         // Identification
         public string Name = "~ Nameless ~";
-        public string Class = "~ Generalist Archetype ~";
+        public int Archetype = 0;
 
         // Visual Data
         public int SkinColor = 0xFFFFFF;
