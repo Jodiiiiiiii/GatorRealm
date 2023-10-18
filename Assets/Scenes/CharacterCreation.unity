@@ -15014,6 +15014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6ed2cb3316f0c41bc4a59ede0acc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayMode: 0
   _nameText: {fileID: 207512935}
   _classText: {fileID: 825060942}
   _bodyOutline: {fileID: 2037016619}
@@ -29334,8 +29335,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 975005648}
   m_HandleRect: {fileID: 975005647}
   m_Direction: 2
-  m_Value: 0.4997603
-  m_Size: 0.16268168
+  m_Value: 0.5
+  m_Size: 0.1626817
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -33123,6 +33124,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3ad8435e06eaa468f158aacbb8ee20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArchetypeToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  HairToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  FaceToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ShirtToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PantsToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ShoesToggles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _colorPicker: {fileID: 0}
+  _closeColorPickerButton: {fileID: 0}
+  _step1: {fileID: 0}
+  _step2: {fileID: 0}
+  _step3: {fileID: 0}
 --- !u!4 &1672257183
 Transform:
   m_ObjectHideFlags: 0
@@ -36511,7 +36552,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 1817137237}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1481685413}
@@ -43267,7 +43308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -42.52002, y: -404.35}
+  m_AnchoredPosition: {x: -42.52002, y: -405.35}
   m_SizeDelta: {x: 828.04004, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145744038
