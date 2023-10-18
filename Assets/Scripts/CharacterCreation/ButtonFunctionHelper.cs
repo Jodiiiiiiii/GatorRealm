@@ -99,7 +99,11 @@ public class ButtonFunctionHelper : MonoBehaviour
         else GameManager.Instance.GetCharacter().Name = "~ Nameless ~";
     }
 
-    public void SetArchetype(int archetypeIndex) { GameManager.Instance.GetCharacter().Archetype = archetypeIndex; }
+    public void SetArchetype(int archetypeIndex) 
+    { 
+        GameManager.Instance.GetCharacter().Archetype = archetypeIndex;
+        GameManager.Instance.GetCharacter().Class = ""; // reset class if archetype changes (shouldn't be needed in practice)
+    }
 
     // Setters
     public void SetHair(int val) { GameManager.Instance.GetCharacter().HairType = val; }
@@ -179,7 +183,7 @@ public class ButtonFunctionHelper : MonoBehaviour
 
     #endregion
 
-    #region STEP 3: FINALIZE
+    #region STEP 3: FINALIZE / CLASS SELECTION
 
     // constants
     private const float GENERALIST_CUTOFF = 0.25f;
@@ -207,18 +211,18 @@ public class ButtonFunctionHelper : MonoBehaviour
         string[] classOptions = new string[3];
         CharacterData character = GameManager.Instance.GetCharacter();
 
-        switch(character.Archetype)
+        int[] maxMidMinIndices; // used to determine priority ordering of three class pairs
+        float minMagnitude; // needed to check for generalist case
+        switch (character.Archetype)
         {
             case 0: // melee
                 // calculate scales for each class pair
                 float warriorToRogue = character.CourageToCaution + character.HonestyToDeception - 1.0f;
                 float paladinToBerserker = character.DiplomacyToAggression + character.MysticismToSkepticism - 1.0f;
                 float protectorToExecutioner = character.EmpathyToRuthlessness + character.OptimismToPessimism - 1.0f;
-
-                // used to determine priority ordering of three class pairs
-                int[] maxMidMinIndices = CalculateOrderedIndices(warriorToRogue, paladinToBerserker, protectorToExecutioner);
-                // needed to check for generalist case
-                float minMagnitude = Mathf.Min(Mathf.Abs(warriorToRogue), Mathf.Abs(paladinToBerserker), Mathf.Abs(protectorToExecutioner));
+                // Other calculations
+                maxMidMinIndices = CalculateOrderedIndices(warriorToRogue, paladinToBerserker, protectorToExecutioner);
+                minMagnitude = Mathf.Min(Mathf.Abs(warriorToRogue), Mathf.Abs(paladinToBerserker), Mathf.Abs(protectorToExecutioner));
 
                 // generate strings from calculated max/mid/min indexes and signs
                 for (int index = 0; index < 3; index++)
@@ -244,8 +248,68 @@ public class ButtonFunctionHelper : MonoBehaviour
 
                 break;
             case 1: // ranged
+                // calculate scales for each class pair
+                float axeHurlerToHunter = character.CourageToCaution + (1.0f - character.DiplomacyToAggression) - 1.0f;
+                float vigilanteToDeadeye = character.HonestyToDeception + character.OptimismToPessimism - 1.0f;
+                float swashbucklerToTinkerer = character.MysticismToSkepticism + (1.0f - character.EmpathyToRuthlessness) - 1.0f;
+                // Other calculations
+                maxMidMinIndices = CalculateOrderedIndices(axeHurlerToHunter, vigilanteToDeadeye, swashbucklerToTinkerer);
+                minMagnitude = Mathf.Min(Mathf.Abs(axeHurlerToHunter), Mathf.Abs(vigilanteToDeadeye), Mathf.Abs(swashbucklerToTinkerer));
+
+                // generate strings from calculated max/mid/min indexes and signs
+                for (int index = 0; index < 3; index++)
+                {
+                    switch (maxMidMinIndices[index])
+                    {
+                        case 0:
+                            if (axeHurlerToHunter < 0) classOptions[index] = "Axe Hurler";
+                            else classOptions[index] = "Hunter";
+                            break;
+                        case 1:
+                            if (vigilanteToDeadeye < 0) classOptions[index] = "Vigilante";
+                            else classOptions[index] = "Deadeye";
+                            break;
+                        case 2:
+                            if (swashbucklerToTinkerer < 0) classOptions[index] = "Swashbuckler";
+                            else classOptions[index] = "Tinkerer";
+                            break;
+                    }
+                }
+                // check for generalist case
+                if (minMagnitude < GENERALIST_CUTOFF) classOptions[2] = "Marksman";
+
                 break;
             case 2: // magic
+                // calculate scales for each class pair
+                float shapeshifterToDruid = character.CourageToCaution + (1.0f - character.HonestyToDeception) - 1.0f;
+                float mediumToIllusionist = character.DiplomacyToAggression + character.MysticismToSkepticism - 1.0f;
+                float healerToNecromancer = character.EmpathyToRuthlessness + character.OptimismToPessimism - 1.0f;
+                // Other calculations
+                maxMidMinIndices = CalculateOrderedIndices(shapeshifterToDruid, mediumToIllusionist, healerToNecromancer);
+                minMagnitude = Mathf.Min(Mathf.Abs(shapeshifterToDruid), Mathf.Abs(mediumToIllusionist), Mathf.Abs(healerToNecromancer));
+
+                // generate strings from calculated max/mid/min indexes and signs
+                for (int index = 0; index < 3; index++)
+                {
+                    switch (maxMidMinIndices[index])
+                    {
+                        case 0:
+                            if (shapeshifterToDruid < 0) classOptions[index] = "Shapeshifter";
+                            else classOptions[index] = "Druid";
+                            break;
+                        case 1:
+                            if (mediumToIllusionist < 0) classOptions[index] = "Medium";
+                            else classOptions[index] = "Illusionist";
+                            break;
+                        case 2:
+                            if (healerToNecromancer < 0) classOptions[index] = "Healer";
+                            else classOptions[index] = "Necromancer";
+                            break;
+                    }
+                }
+                // check for generalist case
+                if (minMagnitude < GENERALIST_CUTOFF) classOptions[2] = "Wizard";
+
                 break;
             default: // error
                 Debug.LogError("CalculateClassOptions(): invalid archetype ID");
