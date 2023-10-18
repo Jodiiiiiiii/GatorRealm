@@ -585,7 +585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &47480083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1695,7 +1695,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3278,7 +3278,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 8.9}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4140,7 +4140,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4788,7 +4788,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 9.1}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6966,7 +6966,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7994,7 +7994,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10729,7 +10729,7 @@ GameObject:
   - component: {fileID: 1004026651}
   - component: {fileID: 1004026650}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Option 2 Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14077,6 +14077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1369367508}
   - component: {fileID: 1369367509}
+  - component: {fileID: 1369367510}
   m_Layer: 5
   m_Name: Class Toggle Group
   m_TagString: Untagged
@@ -14120,6 +14121,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &1369367510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369367507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1deb81d8002ed8444944775864f429a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _images:
+  - {fileID: 1967834856}
+  - {fileID: 1004026650}
+  - {fileID: 1994066587}
+  _brawler: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _warrior: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _rogue: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _paladin: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _berserker: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _protector: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _executioner: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _marksman: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _hunter: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _tinkerer: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _deadeye: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _vigilante: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _axeHurler: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _swashbuckler: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _wizard: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _healer: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _necromancer: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _medium: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _illusionist: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _druid: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _shapeshifter: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1384969341
 GameObject:
   m_ObjectHideFlags: 0
@@ -16303,7 +16341,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 9.1}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16493,7 +16531,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17087,7 +17125,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18161,7 +18199,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 8.9}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18237,7 +18275,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 9.1}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18922,7 +18960,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 9.1}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20168,7 +20206,7 @@ GameObject:
   - component: {fileID: 1967834857}
   - component: {fileID: 1967834856}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Option 1 Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20399,7 +20437,7 @@ GameObject:
   - component: {fileID: 1994066588}
   - component: {fileID: 1994066587}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Option 3 Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20555,7 +20593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2056435738
 RectTransform:
   m_ObjectHideFlags: 0

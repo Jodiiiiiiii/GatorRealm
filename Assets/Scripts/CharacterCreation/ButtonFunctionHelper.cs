@@ -195,7 +195,7 @@ public class ButtonFunctionHelper : MonoBehaviour
     public void SetClass(int buttonIndex)
     {
         if (buttonIndex >= 0 && buttonIndex <= 2)
-            GameManager.Instance.GetCharacter().Class = calculateClassOptions()[buttonIndex];
+            GameManager.Instance.GetCharacter().Class = CalculateClassOptions()[buttonIndex];
         else
             Debug.LogError("SetClass(buttonIndex): invalid buttonIndex (must be 0, 1, or 2)");
     }
@@ -206,7 +206,7 @@ public class ButtonFunctionHelper : MonoBehaviour
     /// <summary>
     /// returns ordered list of string classes determined by personality distribution
     /// </summary>
-    private string[] calculateClassOptions()
+    public static string[] CalculateClassOptions()
     {
         string[] classOptions = new string[3];
         CharacterData character = GameManager.Instance.GetCharacter();
