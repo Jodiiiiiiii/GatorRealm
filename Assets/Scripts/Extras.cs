@@ -29,5 +29,6 @@ namespace Extras
         public float DiplomacyToAggression = 0.5f;
         public float EmpathyToRuthlessness = 0.5f;
         public float OptimismToPessimism = 0.5f;
+        public float MysticismToSkepticism = 0.5f;
     }
 }
