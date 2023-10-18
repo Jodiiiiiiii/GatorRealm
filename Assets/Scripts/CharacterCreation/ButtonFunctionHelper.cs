@@ -16,6 +16,7 @@ public class ButtonFunctionHelper : MonoBehaviour
     private const int NUM_TOGGLES_SHIRT = 6;
 
     // required for updating toggles after randomizing
+    [Header("Toggles")]
     [SerializeField] Toggle[] ArchetypeToggles = new Toggle[NUM_ARCHETYPES];
     [SerializeField] Toggle[] HairToggles = new Toggle[NUM_TOGGLES_STD];
     [SerializeField] Toggle[] FaceToggles = new Toggle[NUM_TOGGLES_STD];
@@ -152,6 +153,7 @@ public class ButtonFunctionHelper : MonoBehaviour
 
     #region APPEARANCE: color picker buttons
     // Color picking
+    [Header("Color Picking")]
     [SerializeField] private ColorPickerInputHandler _colorPicker;
     [SerializeField] private GameObject _closeColorPickerButton;
 
@@ -180,6 +182,44 @@ public class ButtonFunctionHelper : MonoBehaviour
         _closeColorPickerButton.SetActive(false);
     }
     #endregion
+
+    #endregion
+
+    #region STEP NAVIGATION
+
+    [Header("Step Navigation")]
+    [SerializeField] private GameObject _step1;
+    [SerializeField] private GameObject _step2;
+    [SerializeField] private GameObject _step3;
+
+    /// <summary>
+    /// enable appropriate step and disable all others
+    /// </summary>
+    /// <param name="screenIndex">between 1 and 3 (step number)</param>
+    public void LoadStepScreen(int screenIndex)
+    {
+        switch(screenIndex)
+        {
+            case 1:
+                _step1.SetActive(true);
+                _step2.SetActive(false);
+                _step3.SetActive(false);
+                break;
+            case 2:
+                _step1.SetActive(false);
+                _step2.SetActive(true);
+                _step3.SetActive(false);
+                break;
+            case 3:
+                _step1.SetActive(false);
+                _step2.SetActive(false);
+                _step3.SetActive(true);
+                break;
+            default:
+                Debug.Log("LoadStepScreen(screenIndex): Invalid screenIndex");
+                break;
+        }
+    }
 
     #endregion
 }
