@@ -179,6 +179,125 @@ public class ButtonFunctionHelper : MonoBehaviour
 
     #endregion
 
+    #region STEP 3: FINALIZE
+
+    // constants
+    private const float GENERALIST_CUTOFF = 0.25f;
+
+    /// <summary>
+    /// Updates class string in save data
+    /// </summary>
+    /// <param name="buttonIndex">index of class option button (0 to 2)</param>
+    public void SetClass(int buttonIndex)
+    {
+        if (buttonIndex >= 0 && buttonIndex <= 2)
+            GameManager.Instance.GetCharacter().Class = calculateClassOptions()[buttonIndex];
+        else
+            Debug.LogError("SetClass(buttonIndex): invalid buttonIndex (must be 0, 1, or 2)");
+    }
+
+    // clear class on untoggle
+    public void CheckUntoggleClass(ToggleGroup group) { if (!group.AnyTogglesOn()) GameManager.Instance.GetCharacter().Class = ""; }
+
+    /// <summary>
+    /// returns ordered list of string classes determined by personality distribution
+    /// </summary>
+    private string[] calculateClassOptions()
+    {
+        string[] classOptions = new string[3];
+        CharacterData character = GameManager.Instance.GetCharacter();
+
+        switch(character.Archetype)
+        {
+            case 0: // melee
+                // calculate scales for each class pair
+                float warriorToRogue = character.CourageToCaution + character.HonestyToDeception - 1.0f;
+                float paladinToBerserker = character.DiplomacyToAggression + character.MysticismToSkepticism - 1.0f;
+                float protectorToExecutioner = character.EmpathyToRuthlessness + character.OptimismToPessimism - 1.0f;
+
+                // used to determine priority ordering of three class pairs
+                int[] maxMidMinIndices = CalculateOrderedIndices(warriorToRogue, paladinToBerserker, protectorToExecutioner);
+                // needed to check for generalist case
+                float minMagnitude = Mathf.Min(Mathf.Abs(warriorToRogue), Mathf.Abs(paladinToBerserker), Mathf.Abs(protectorToExecutioner));
+
+                // generate strings from calculated max/mid/min indexes and signs
+                for (int index = 0; index < 3; index++)
+                {
+                    switch(maxMidMinIndices[index])
+                    {
+                        case 0:
+                            if (warriorToRogue < 0) classOptions[index] = "Warrior";
+                            else classOptions[index] = "Rogue";
+                            break;
+                        case 1:
+                            if (paladinToBerserker < 0) classOptions[index] = "Paladin";
+                            else classOptions[index] = "Berserker";
+                            break;
+                        case 2:
+                            if (protectorToExecutioner < 0) classOptions[index] = "Protector";
+                            else classOptions[index] = "Executioner";
+                            break;
+                    }
+                }
+                // check for generalist case
+                if (minMagnitude < GENERALIST_CUTOFF) classOptions[2] = "Brawler";
+
+                break;
+            case 1: // ranged
+                break;
+            case 2: // magic
+                break;
+            default: // error
+                Debug.LogError("CalculateClassOptions(): invalid archetype ID");
+                break;
+        }
+
+        return classOptions;
+
+        // generates ordering of indices for three value scales
+        int[] CalculateOrderedIndices(float val0, float val1, float val2)
+        {
+            // determine BEST match
+            int maxIndex;
+            float maxMagnitude = Mathf.Max(Mathf.Abs(val0), Mathf.Abs(val1), Mathf.Abs(val2));
+            if (maxMagnitude == Mathf.Abs(val0)) maxIndex = 0;
+            else if (maxMagnitude == Mathf.Abs(val1)) maxIndex = 1;
+            else maxIndex = 2; // third option max
+
+            // determine WORST/MIDDLE match - ensure no duplicate in case of ties
+            int midIndex;
+            int minIndex;
+            float minMagnitude = Mathf.Min(Mathf.Abs(val0), Mathf.Abs(val1), Mathf.Abs(val2));
+            if (minMagnitude == Mathf.Abs(val0))
+            {
+                minIndex = 0;
+                midIndex = maxIndex == 1 ? 2 : 1; // mid is the one neither min or max are
+            }
+            else if (minMagnitude == Mathf.Abs(val1))
+            {
+                minIndex = 1;
+                midIndex = maxIndex == 0 ? 2 : 0; // mid is the one neither min or max are
+            }
+            else // third option min
+            {
+                minIndex = 2;
+                midIndex = maxIndex == 0 ? 1 : 0; // mid is the one neither min or max are
+            }
+
+            if (maxIndex == minIndex) // min == max -> ensure no duplicate in the case of three-way tie
+            {
+                // arbitrary assignment to prevent duplicates
+                maxIndex = 0;
+                midIndex = 1;
+                minIndex = 2;
+            }
+
+            return new int[] {maxIndex, midIndex, minIndex };
+        }
+    }
+
+    #endregion
+
     #region STEP NAVIGATION
 
     [Header("Step Navigation")]
@@ -210,7 +329,7 @@ public class ButtonFunctionHelper : MonoBehaviour
                 _step3.SetActive(true);
                 break;
             default:
-                Debug.Log("LoadStepScreen(screenIndex): Invalid screenIndex");
+                Debug.LogError("LoadStepScreen(screenIndex): Invalid screenIndex");
                 break;
         }
     }

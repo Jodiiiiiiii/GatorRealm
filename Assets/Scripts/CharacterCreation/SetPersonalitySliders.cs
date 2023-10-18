@@ -11,6 +11,7 @@ public class SetPersonalitySliders : MonoBehaviour
     [SerializeField] private Slider _diplomacyToAggression;
     [SerializeField] private Slider _empathyToRuthlessness;
     [SerializeField] private Slider _optimismToPessimism;
+    [SerializeField] private Slider _mysticismToSkepticism;
 
     // Update is called once per frame
     void Update()
@@ -21,5 +22,6 @@ public class SetPersonalitySliders : MonoBehaviour
         _diplomacyToAggression.value = GameManager.Instance.GetCharacter().DiplomacyToAggression;
         _empathyToRuthlessness.value = GameManager.Instance.GetCharacter().EmpathyToRuthlessness;
         _optimismToPessimism.value = GameManager.Instance.GetCharacter().OptimismToPessimism;
+        _mysticismToSkepticism.value = GameManager.Instance.GetCharacter().MysticismToSkepticism;
     }
 }
