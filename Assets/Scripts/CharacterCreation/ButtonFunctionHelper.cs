@@ -11,7 +11,7 @@ public class ButtonFunctionHelper : MonoBehaviour
 
     #region APPEARANCE: randomize
     // constants
-    private const int NUM_ARCHETYPES = 4;
+    private const int NUM_ARCHETYPES = 3;
     private const int NUM_TOGGLES_STD = 5;
     private const int NUM_TOGGLES_SHIRT = 6;
 

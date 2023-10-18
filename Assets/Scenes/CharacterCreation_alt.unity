@@ -17319,7 +17319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArchetypeToggles:
-  - {fileID: 0}
   - {fileID: 706584480}
   - {fileID: 68668348}
   - {fileID: 996551958}
