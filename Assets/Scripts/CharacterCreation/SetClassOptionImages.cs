@@ -36,79 +36,86 @@ public class SetClassOptionImages : MonoBehaviour
     [SerializeField] private Sprite _druid;
     [SerializeField] private Sprite _shapeshifter;
 
+    private bool _imagesSet = false;
+
     // Update is called once per frame
     void Update()
     {
-        string[] classOptions = ButtonFunctionHelper.CalculateClassOptions();
-
-        for(int index = 0; index < 3; index++)
+        if(!_imagesSet)
         {
-            switch(classOptions[index])
+            string[] classOptions = ButtonFunctionHelper.CalculateClassOptions();
+
+            for (int index = 0; index < 3; index++)
             {
-                case "Brawler":
-                    _images[index].sprite = _brawler;
-                    break;
-                case "Warrior":
-                    _images[index].sprite = _warrior;
-                    break;
-                case "Rogue":
-                    _images[index].sprite = _rogue;
-                    break;
-                case "Paladin":
-                    _images[index].sprite = _paladin;
-                    break;
-                case "Berserker":
-                    _images[index].sprite = _berserker;
-                    break;
-                case "Protector":
-                    _images[index].sprite = _protector;
-                    break;
-                case "Executioner":
-                    _images[index].sprite = _executioner;
-                    break;
-                case "Marksman":
-                    _images[index].sprite = _marksman;
-                    break;
-                case "Hunter":
-                    _images[index].sprite = _hunter;
-                    break;
-                case "Tinkerer":
-                    _images[index].sprite = _tinkerer;
-                    break;
-                case "Deadeye":
-                    _images[index].sprite = _deadeye;
-                    break;
-                case "Vigilante":
-                    _images[index].sprite = _vigilante;
-                    break;
-                case "Axe Hurler":
-                    _images[index].sprite = _axeHurler;
-                    break;
-                case "Swashbuckler":
-                    _images[index].sprite = _swashbuckler;
-                    break;
-                case "Wizard":
-                    _images[index].sprite = _wizard;
-                    break;
-                case "Healer":
-                    _images[index].sprite = _healer;
-                    break;
-                case "Necromancer":
-                    _images[index].sprite = _necromancer;
-                    break;
-                case "Medium":
-                    _images[index].sprite = _medium;
-                    break;
-                case "Illusionist":
-                    _images[index].sprite = _illusionist;
-                    break;
-                case "Druid":
-                    _images[index].sprite = _druid;
-                    break;
-                case "Shapeshifter":
-                    _images[index].sprite = _shapeshifter;
-                    break;
+                switch (classOptions[index])
+                {
+                    case "Brawler":
+                        _images[index].sprite = _brawler;
+                        break;
+                    case "Warrior":
+                        _images[index].sprite = _warrior;
+                        break;
+                    case "Rogue":
+                        _images[index].sprite = _rogue;
+                        break;
+                    case "Paladin":
+                        _images[index].sprite = _paladin;
+                        break;
+                    case "Berserker":
+                        _images[index].sprite = _berserker;
+                        break;
+                    case "Protector":
+                        _images[index].sprite = _protector;
+                        break;
+                    case "Executioner":
+                        _images[index].sprite = _executioner;
+                        break;
+                    case "Marksman":
+                        _images[index].sprite = _marksman;
+                        break;
+                    case "Hunter":
+                        _images[index].sprite = _hunter;
+                        break;
+                    case "Tinkerer":
+                        _images[index].sprite = _tinkerer;
+                        break;
+                    case "Deadeye":
+                        _images[index].sprite = _deadeye;
+                        break;
+                    case "Vigilante":
+                        _images[index].sprite = _vigilante;
+                        break;
+                    case "Axe Hurler":
+                        _images[index].sprite = _axeHurler;
+                        break;
+                    case "Swashbuckler":
+                        _images[index].sprite = _swashbuckler;
+                        break;
+                    case "Wizard":
+                        _images[index].sprite = _wizard;
+                        break;
+                    case "Healer":
+                        _images[index].sprite = _healer;
+                        break;
+                    case "Necromancer":
+                        _images[index].sprite = _necromancer;
+                        break;
+                    case "Medium":
+                        _images[index].sprite = _medium;
+                        break;
+                    case "Illusionist":
+                        _images[index].sprite = _illusionist;
+                        break;
+                    case "Druid":
+                        _images[index].sprite = _druid;
+                        break;
+                    case "Shapeshifter":
+                        _images[index].sprite = _shapeshifter;
+                        break;
+                }
             }
+
+            _imagesSet = true;
         }
     }
 }
