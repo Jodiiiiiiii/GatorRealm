@@ -9,15 +9,17 @@ namespace Extras
     {
         // Identification
         public string Name = "~ Nameless ~";
-        public string Class = "~ Generalist Archetype ~";
+        public int Archetype = 0;
+        public string Class = "";
 
         // Visual Data
+        public int SkinColor = 0xFFFFFF;
         public int HairType = 0;
         public int HairColor = 0xFFFFFF;
-        public int FaceType = 0;
-        public int FaceColor = 0xFFFFFF;
+        public int FaceType = 1;
         public int ShirtType = 0;
-        public int ShirtColor = 0xFFFFFF;
+        public int ShirtColor1 = 0xFFFFFF;
+        public int ShirtColor2 = 0xFFFFFF;
         public int PantsType = 0;
         public int PantsColor = 0xFFFFFF;
         public int ShoesType = 0;
@@ -30,5 +32,23 @@ namespace Extras
         public float EmpathyToRuthlessness = 0.5f;
         public float OptimismToPessimism = 0.5f;
         public float MysticismToSkepticism = 0.5f;
+    }
+
+    public static class HelperFunctions
+    {
+        /// <summary>
+        /// converts integer to Color instance using bit shifting and bit masking
+        /// </summary>
+        public static Color IntToColor(int colorInt)
+        {
+            return new Color(Mathf.InverseLerp(0, 255, colorInt >> 16 & 0x0000FF),
+                Mathf.InverseLerp(0, 255, colorInt >> 8 & 0x0000FF),
+                Mathf.InverseLerp(0, 255, colorInt & 0x0000FF), 1);
+        }
+
+        public static int ColorToInt(Color color)
+        {
+            return (int)(color.r * 255) << 16 | (int)(color.g * 255) << 8 | (int)(color.b * 255);
+        }
     }
 }
