@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectButtons : MonoBehaviour
 {
     private ScreenTransition screenTransition;
-    private CharacterDetailScreen detailScreen;
+    private CharacterPanelManager panelManager;
+    private PanelController detailScreen;
+    private PanelController deleteScreen;
+
+    [SerializeField] private Animator buttonAnim;
+
+    private bool activeCoroutine;
 
     public delegate void OnDetailPanelOpen();
     public static event OnDetailPanelOpen onDetailPanelOpen;
@@ -21,7 +27,15 @@ public class CharacterSelectButtons : MonoBehaviour
     private void Start()
     {
         screenTransition = FindObjectOfType<ScreenTransition>();
-        detailScreen = FindObjectOfType<CharacterDetailScreen>();   
+        panelManager = FindObjectOfType<CharacterPanelManager>();
+        detailScreen = GameObject.Find("Character Detail Panel").GetComponent<PanelController>();
+        deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<PanelController>();
+    }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("It work");
+        
     }
 
     public void BackButton() // Goes back to the main menu
@@ -38,33 +52,47 @@ public class CharacterSelectButtons : MonoBehaviour
 
     public void CharaDetailButton() // Pulls the detail window down
     {
+        // So, this also needs to tell the panel manager the index of whatever button we just clicked on
+        panelManager.SetSelectedIndex(GetComponentInParent<CharacterPanel>().GetIndex());
         detailScreen.ShowPanel();
         onDetailPanelOpen?.Invoke();
-        //TODO: Fade in raycast blocker for back layer of buttons
     }
+
+    public void PlayButton()
+    {
+        StartCoroutine(DoPlay());
+    }
+
 
     public void CloseCharaDetailButton() // Pushes the detail window up
     {
         detailScreen.HidePanel();
         onDetailPanelClose?.Invoke();
-        //TODO: Fade out raycast blocker for back layer of buttons
     }
 
     public void DeleteButton()  // Calls down the delete confirmation window
     {
-        //TODO: Fade in raycast blocker for back two layers of buttons
+        deleteScreen.ShowPanel();
+        onDeletePanelOpen?.Invoke();
     }
 
     public void DeleteConfirmationButton()  // Confirms and executes deletion procedures
     {
-        // Play the screen transition effect
-        // Remove the character from the backend
-        // Reload the scene
+        StartCoroutine(DoDeleteChara());
     }
 
     public void DeleteDenialButton()    // Backs the delete window down, keeps character intact
     {
-        //TODO: Fade out raycast blocker for back two layers of buttons
+        deleteScreen.HidePanel();
+        onDeletePanelClose?.Invoke();
+    }
+
+    public void MouseOver()
+    {
+        if (buttonAnim != null && !activeCoroutine)
+        {
+           StartCoroutine(DoMouseOverAnim());
+        }
     }
 
     // Coroutines --------------------------------------------------
@@ -75,11 +103,37 @@ public class CharacterSelectButtons : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    private IEnumerator DoPlay()
+    {
+        screenTransition.GoToNextScene();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3);
+    }
+
+    private IEnumerator DoDeleteChara()
+    {
+        screenTransition.GoToNextScene();
+        yield return new WaitForSeconds(1f);
+
+        // This is where we need to delete whatever character is currently selected from the backed
+        GameManager.Instance.RemoveCharacter(panelManager.GetSelectedIndex());
+
+        SceneManager.LoadScene(1);
+    }
+
     private IEnumerator DoNewChara()
     {
         GameManager.Instance.AddCharacter();
         screenTransition.GoToNextScene();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(2);
+    }
+
+    private IEnumerator DoMouseOverAnim()
+    {
+        activeCoroutine = true;
+        buttonAnim.Play("PosterMouseOver", 0, 0);
+        yield return new WaitForSeconds(1f);
+        activeCoroutine = false;
     }
 }

@@ -15,6 +15,11 @@ public class CharacterPanel : MonoBehaviour
     {
         this.arrayIndex = arrayIndex;
     }
+
+    public int GetIndex()
+    {
+        return arrayIndex;
+    }
     
 
     void Start()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterDetailScreen : MonoBehaviour
+public class PanelController : MonoBehaviour
 {
     // The movement here is copied over from CameraControl...
     // TODO: Combine CameraControl and CharacterDetail screen into a general "Moving Things" class
