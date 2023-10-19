@@ -4,9 +4,69 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Extras;
+using UnityEngine.SceneManagement;
 
 public class ButtonFunctionHelper : MonoBehaviour
 {
+    #region SCENE TRANSITIONS
+
+    private const int SELECT_SCENE_INDEX = 1;
+    private const int PLAY_SCENE_INDEX = 3;
+
+    private ScreenTransition _screenTransition;
+
+    private void Start()
+    {
+        _screenTransition = FindObjectOfType<ScreenTransition>();
+    }
+
+    public void EviscerateButton() // Goes back to character select - deletes character
+    {
+        StopAllCoroutines();
+        StartCoroutine(DoEviscerate());
+    }
+
+    public void BackButton() // Goes back to character select - saves character
+    {
+        StopAllCoroutines();
+        StartCoroutine(DoBack());
+    }
+
+    public void PlayButton() // Goes to play scene
+    {
+        StopAllCoroutines();
+        StartCoroutine(DoPlay());
+    }
+
+    // Coroutines
+    private IEnumerator DoEviscerate()
+    {
+        _screenTransition.GoToPrevScene();
+        yield return new WaitForSeconds(1f);
+        // Delete current selected character's data
+        GameManager.Instance.RemoveCurrentCharacter();
+        // load new scene
+        SceneManager.LoadScene(SELECT_SCENE_INDEX);
+    }
+
+    private IEnumerator DoBack()
+    {
+        _screenTransition.GoToPrevScene();
+        yield return new WaitForSeconds(1f);
+        // load new scene
+        SceneManager.LoadScene(SELECT_SCENE_INDEX);
+    }
+
+    private IEnumerator DoPlay()
+    {
+        _screenTransition.GoToNextScene();
+        yield return new WaitForSeconds(1f);
+        // load new scene
+        SceneManager.LoadScene(PLAY_SCENE_INDEX);
+    }
+
+    #endregion
+
     #region STEP 1: APPEARANCE
 
     #region APPEARANCE: randomize

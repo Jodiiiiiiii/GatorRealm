@@ -130,6 +130,15 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
+    /// For CHARACTER SELECT:
+    /// Deleted character which has not yet been finalized
+    /// </summary>
+    public void RemoveCurrentCharacter()
+    {
+        RemoveCharacter(_selectedCharacterIndex);
+    }
+
+    /// <summary>
     /// For CHARACTER SELECT: 
     /// call this to remove a specific index;
     /// The result will shift remaining characters so only smallest possible indices are used

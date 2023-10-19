@@ -970,8 +970,8 @@ RectTransform:
   m_Children:
   - {fileID: 1437321900}
   - {fileID: 92531506}
-  - {fileID: 1667695491}
   - {fileID: 1009291830}
+  - {fileID: 1667695491}
   - {fileID: 1532149764}
   - {fileID: 1268290981}
   - {fileID: 244450406}
@@ -7178,7 +7178,7 @@ GameObject:
   - component: {fileID: 300431477}
   - component: {fileID: 300431476}
   m_Layer: 5
-  m_Name: Back Button
+  m_Name: Eviscerate Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7248,7 +7248,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300431477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: EviscerateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300431477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24969,7 +24981,7 @@ GameObject:
   - component: {fileID: 1009291832}
   - component: {fileID: 1009291831}
   m_Layer: 5
-  m_Name: Back to Select Button
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24989,11 +25001,11 @@ RectTransform:
   m_Children:
   - {fileID: 1539378798}
   m_Father: {fileID: 47480083}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 81, y: -491.99994}
+  m_AnchoredPosition: {x: -166, y: -491.99994}
   m_SizeDelta: {x: 230.83997, y: 51.002014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009291831
@@ -25039,7 +25051,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009291832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009291832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40174,11 +40198,11 @@ RectTransform:
   m_Children:
   - {fileID: 1327797811}
   m_Father: {fileID: 47480083}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -166, y: -491.99994}
+  m_AnchoredPosition: {x: 81, y: -491.99994}
   m_SizeDelta: {x: 230.83997, y: 51.002014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667695492
@@ -40224,7 +40248,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1667695493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672257182}
+        m_TargetAssemblyTypeName: ButtonFunctionHelper, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1667695493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41307,7 +41343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <  To Select Screen
+  m_text: Eviscerate Character
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
