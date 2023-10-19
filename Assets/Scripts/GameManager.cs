@@ -120,8 +120,8 @@ public class GameManager : MonoBehaviour
             // initialize character with new character data
             _data.Characters[_data.CharacterCount] = new CharacterData();
 
-            _data.CharacterCount++;
             SetSelectedCharacterIndex(_data.CharacterCount);
+            _data.CharacterCount++;
         }
         else
             Debug.LogError("AddCharacter: max capacity; unable to add character");
