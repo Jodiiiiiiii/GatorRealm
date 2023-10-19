@@ -56,10 +56,8 @@ public class GameManager : MonoBehaviour
             {
                 _data.CharacterCount = 0;
                 _data.Characters = new CharacterData[MAX_CHARACTERS];
-#if UNITY_EDITOR
-                // prevents crash when starting editor from CharacterCreation scene with no existing .json file
-                _data.Characters[0] = new CharacterData();
-#endif
+                for (int i = 0; i < MAX_CHARACTERS; i++)
+                    _data.Characters[i] = new CharacterData();
             }
 
             // components

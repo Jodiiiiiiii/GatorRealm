@@ -8,30 +8,59 @@ namespace Extras
     public class CharacterData
     {
         // Identification
-        public string Name = "~ Nameless ~";
-        public int Archetype = 0;
-        public string Class = "";
+        public string Name;
+        public int Archetype;
+        public string Class;
 
         // Visual Data
-        public int SkinColor = 0xFFFFFF;
-        public int HairType = 0;
-        public int HairColor = 0xFFFFFF;
-        public int FaceType = 1;
-        public int ShirtType = 0;
-        public int ShirtColor1 = 0xFFFFFF;
-        public int ShirtColor2 = 0xFFFFFF;
-        public int PantsType = 0;
-        public int PantsColor = 0xFFFFFF;
-        public int ShoesType = 0;
-        public int ShoesColor = 0xFFFFFF;
+        public int SkinColor;
+        public int HairType;
+        public int HairColor;
+        public int FaceType;
+        public int ShirtType;
+        public int ShirtColor1;
+        public int ShirtColor2;
+        public int PantsType;
+        public int PantsColor;
+        public int ShoesType;
+        public int ShoesColor;
 
         // Personality Data
-        public float CourageToCaution = 0.5f;
-        public float HonestyToDeception = 0.5f;
-        public float DiplomacyToAggression = 0.5f;
-        public float EmpathyToRuthlessness = 0.5f;
-        public float OptimismToPessimism = 0.5f;
-        public float MysticismToSkepticism = 0.5f;
+        public float CourageToCaution;
+        public float HonestyToDeception;
+        public float DiplomacyToAggression;
+        public float EmpathyToRuthlessness;
+        public float OptimismToPessimism;
+        public float MysticismToSkepticism;
+
+        public CharacterData()
+        {
+            // Identification
+            Name = "~ Nameless ~";
+            Archetype = 0;
+            Class = "";
+
+            // Visual Data
+            SkinColor = 0xFFFFFF;
+            HairType = 0;
+            HairColor = 0xFFFFFF;
+            FaceType = 1;
+            ShirtType = 0;
+            ShirtColor1 = 0xFFFFFF;
+            ShirtColor2 = 0xFFFFFF;
+            PantsType = 0;
+            PantsColor = 0xFFFFFF;
+            ShoesType = 0;
+            ShoesColor = 0xFFFFFF;
+    
+            // Personality Data
+            CourageToCaution = 0.5f;
+            HonestyToDeception = 0.5f;
+            DiplomacyToAggression = 0.5f;
+            EmpathyToRuthlessness = 0.5f;
+            OptimismToPessimism = 0.5f;
+            MysticismToSkepticism = 0.5f;
+        }
     }
 
     public static class HelperFunctions
