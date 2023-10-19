@@ -44,7 +44,7 @@ public class FadeUI : MonoBehaviour
     {                           
         while (canvasGroup.alpha > 0f)
         {
-            Debug.Log(canvasGroup.alpha);
+            //Debug.Log(canvasGroup.alpha);
             canvasGroup.alpha -= Time.deltaTime * 3f;
             yield return null;
         }
