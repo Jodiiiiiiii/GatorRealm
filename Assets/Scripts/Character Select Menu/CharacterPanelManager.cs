@@ -88,7 +88,7 @@ public class CharacterPanelManager : MonoBehaviour
     {
         int onScreenCount = GameManager.Instance.GetCharacterCount(); // A running tally of how many character panels are currently displayed
         yield return new WaitForSeconds(.8f);
-        Debug.Log(GameManager.Instance.GetCharacterCount());
+        //Debug.Log(GameManager.Instance.GetCharacterCount());
         for (int i = 0; i < GameManager.Instance.GetCharacterCount(); i++) // While we can still get characters
         {
             GameManager.Instance.SetSelectedCharacterIndex(i);   // Sets the appropriate index for getting the next character

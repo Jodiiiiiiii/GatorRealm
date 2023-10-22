@@ -34,7 +34,7 @@ public class CharacterSelectButtons : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log("It work");
+        //Debug.Log("It work");
         
     }
 

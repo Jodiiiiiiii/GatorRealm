@@ -56,10 +56,8 @@ public class GameManager : MonoBehaviour
             {
                 _data.CharacterCount = 0;
                 _data.Characters = new CharacterData[MAX_CHARACTERS];
-#if UNITY_EDITOR
-                // prevents crash when starting editor from CharacterCreation scene with no existing .json file
-                _data.Characters[0] = new CharacterData();
-#endif
+                for (int i = 0; i < MAX_CHARACTERS; i++)
+                    _data.Characters[i] = new CharacterData();
             }
 
             // components
@@ -122,11 +120,20 @@ public class GameManager : MonoBehaviour
             // initialize character with new character data
             _data.Characters[_data.CharacterCount] = new CharacterData();
 
-            _data.CharacterCount++;
             SetSelectedCharacterIndex(_data.CharacterCount);
+            _data.CharacterCount++;
         }
         else
             Debug.LogError("AddCharacter: max capacity; unable to add character");
+    }
+
+    /// <summary>
+    /// For CHARACTER SELECT:
+    /// Deleted character which has not yet been finalized
+    /// </summary>
+    public void RemoveCurrentCharacter()
+    {
+        RemoveCharacter(_selectedCharacterIndex);
     }
 
     /// <summary>
