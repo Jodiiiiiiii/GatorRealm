@@ -33,6 +33,7 @@ public class FadeUI : MonoBehaviour
 
     IEnumerator DoFadeInUI()
     {
+        canvasGroup = GetComponent<CanvasGroup>();
         while (canvasGroup.alpha < 1f)
         {
             canvasGroup.alpha += Time.deltaTime * 3f;
@@ -41,7 +42,8 @@ public class FadeUI : MonoBehaviour
 
     }
     IEnumerator DoFadeOutUI()
-    {                           
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
         while (canvasGroup.alpha > 0f)
         {
             //Debug.Log(canvasGroup.alpha);

@@ -12,30 +12,69 @@ public class ButtonFunctionHelper : MonoBehaviour
 
     private const int SELECT_SCENE_INDEX = 1;
     private const int PLAY_SCENE_INDEX = 3;
+    private bool play = false;
 
     private ScreenTransition _screenTransition;
+    private PanelController deleteScreen;
+    private PanelController submitScreen;
+    private PanelController finalizeScreen;
+    [SerializeField] private FadeUI raycastBlocker;
 
     private void Start()
     {
         _screenTransition = FindObjectOfType<ScreenTransition>();
+        deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<PanelController>();
+        submitScreen = GameObject.Find("Confirm Submit").GetComponent<PanelController>();
+        finalizeScreen = GameObject.Find("Confirm Finalize").GetComponent<PanelController>();
+        raycastBlocker.gameObject.SetActive(false);
     }
 
-    public void EviscerateButton() // Goes back to character select - deletes character
+    public void DeleteButton()  // Calls down the delete confirmation window
+    {
+        deleteScreen.ShowPanel();
+        raycastBlocker.gameObject.SetActive(true);
+        raycastBlocker.UIFadeIn();
+    }
+
+    public void DeleteConfirmButton() // Goes back to character select - deletes character
     {
         StopAllCoroutines();
         StartCoroutine(DoEviscerate());
     }
 
-    public void BackButton() // Goes back to character select - saves character
+    public void DeleteDenialButton()    // Backs the delete window down, keeps character intact
     {
-        StopAllCoroutines();
-        StartCoroutine(DoBack());
+        deleteScreen.HidePanel();
+        raycastBlocker.UIFadeOut();
     }
 
-    public void PlayButton() // Goes to play scene
+    public void PlayButton()
+    {
+        play = true;
+        finalizeScreen.ShowPanel();
+        raycastBlocker.gameObject.SetActive(true);
+        raycastBlocker.UIFadeIn();
+    }
+
+    public void BackToSelectButton()
+    {
+        play = false;
+        finalizeScreen.ShowPanel();
+        raycastBlocker.gameObject.SetActive(true);
+        raycastBlocker.UIFadeIn();
+    }
+
+
+    public void ConfirmLeaveButton() // Goes back to character select - saves character
     {
         StopAllCoroutines();
-        StartCoroutine(DoPlay());
+        StartCoroutine(DoLeaveScene(play));
+    }
+
+    public void RejectLeaveButton()
+    {
+        finalizeScreen.HidePanel();
+        raycastBlocker.UIFadeOut();
     }
 
     // Coroutines
@@ -49,7 +88,7 @@ public class ButtonFunctionHelper : MonoBehaviour
         SceneManager.LoadScene(SELECT_SCENE_INDEX);
     }
 
-    private IEnumerator DoBack()
+    /*private IEnumerator DoBack()
     {
         _screenTransition.GoToPrevScene();
         yield return new WaitForSeconds(1f);
@@ -63,6 +102,24 @@ public class ButtonFunctionHelper : MonoBehaviour
         yield return new WaitForSeconds(1f);
         // load new scene
         SceneManager.LoadScene(PLAY_SCENE_INDEX);
+    }*/
+
+    private IEnumerator DoLeaveScene(bool play)
+    {
+        if (play)
+        {
+            _screenTransition.GoToNextScene();
+            yield return new WaitForSeconds(1f);
+            // load new scene
+            SceneManager.LoadScene(PLAY_SCENE_INDEX);
+        }
+        else
+        {
+            _screenTransition.GoToPrevScene();
+            yield return new WaitForSeconds(1f);
+            // load new scene
+            SceneManager.LoadScene(SELECT_SCENE_INDEX);
+        }
     }
 
     #endregion
@@ -496,14 +553,30 @@ public class ButtonFunctionHelper : MonoBehaviour
                 _step3.SetActive(false);
                 break;
             case 3:
-                _step1.SetActive(false);
-                _step2.SetActive(false);
-                _step3.SetActive(true);
+                submitScreen.ShowPanel();
+                raycastBlocker.gameObject.SetActive(true);
+                raycastBlocker.UIFadeIn();
                 break;
             default:
                 Debug.LogError("LoadStepScreen(screenIndex): Invalid screenIndex");
                 break;
         }
+    }
+
+    public void ConfirmSubmit()
+    {
+        _step1.SetActive(false);
+        _step2.SetActive(false);
+        _step3.SetActive(true);
+        Submit();
+        submitScreen.HidePanel();
+        raycastBlocker.UIFadeOut();
+    }
+
+    public void RejectSubmit()
+    {
+        submitScreen.HidePanel();
+        raycastBlocker.UIFadeOut();
     }
 
     #endregion
