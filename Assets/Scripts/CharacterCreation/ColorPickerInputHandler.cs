@@ -17,25 +17,30 @@ public class ColorPickerInputHandler : MonoBehaviour
         switch (_colorIndex)
         {
             case 0: // skin color
-                GameManager.Instance.GetCharacter().SkinColor = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().SkinColor = getColorInput();
                 break;
             case 1: // hair color
-                GameManager.Instance.GetCharacter().HairColor = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().HairColor = getColorInput();
                 break;
             case 2: // shirt color 1
-                GameManager.Instance.GetCharacter().ShirtColor1 = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().ShirtColor1 = getColorInput();
                 break;
             case 3: // shirt color 2
-                GameManager.Instance.GetCharacter().ShirtColor2 = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().ShirtColor2 = getColorInput();
                 break;
             case 4: // pants color
-                GameManager.Instance.GetCharacter().PantsColor = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().PantsColor = getColorInput();
                 break;
             case 5: // shoes color
-                GameManager.Instance.GetCharacter().ShoesColor = Convert.ToInt32(colorInput.text[1..], 16);
+                GameManager.Instance.GetCharacter().ShoesColor = getColorInput();
                 break;
             default: // none selected
                 break;
+        }
+
+        int getColorInput()
+        {
+            return colorInput.text.Length >= 2 ? Convert.ToInt32(colorInput.text[1..], 16) : 0;
         }
     }
 
