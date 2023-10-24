@@ -889,8 +889,8 @@ RectTransform:
   - {fileID: 1967409013}
   - {fileID: 1324924193}
   - {fileID: 990659903}
-  - {fileID: 1410050410}
   - {fileID: 1247767438}
+  - {fileID: 1410050410}
   - {fileID: 402514609}
   - {fileID: 1012230626}
   - {fileID: 498043003}
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visiblePos: {x: 0, y: 0, z: 0}
   hiddenPos: {x: 0, y: 1220, z: 0}
-  movementTime: 0.75
+  movementTime: 0.5
 --- !u!1 &592901459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,7 +3681,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 334804262}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4193,11 +4193,11 @@ RectTransform:
   - {fileID: 828473356}
   - {fileID: 1625630896}
   m_Father: {fileID: 334804262}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -748, y: -466}
+  m_AnchoredPosition: {x: -846, y: -488}
   m_SizeDelta: {x: 69.38, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410050411
@@ -4515,7 +4515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457824399446026897, guid: efe0b51dc6bedc341a93d6ba72cbcbb2, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 457824399446026897, guid: efe0b51dc6bedc341a93d6ba72cbcbb2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4805,7 +4805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visiblePos: {x: 0, y: 0, z: 0}
   hiddenPos: {x: 0, y: -1080, z: 0}
-  movementTime: 0.75
+  movementTime: 0.3
 --- !u!1 &1594364017
 GameObject:
   m_ObjectHideFlags: 0
