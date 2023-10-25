@@ -324,27 +324,27 @@ public class ButtonFunctionHelper : MonoBehaviour
     {
         // Courage to Caution
         float courageCaution = answers[0] + answers[6] + answers[12];
-        GameManager.Instance.GetCharacter().CourageToCaution = 0.5f + courageCaution;
+        GameManager.Instance.GetCharacter().CourageToCaution = 0.5f - courageCaution;
 
         // Honesty to Deception
         float honestyDeception = answers[1] + answers[7] + answers[13];
-        GameManager.Instance.GetCharacter().HonestyToDeception = 0.5f + honestyDeception;
+        GameManager.Instance.GetCharacter().HonestyToDeception = 0.5f - honestyDeception;
 
         // Diplomacy to Aggression
         float diplomacyAggression = answers[2] + answers[8];
-        GameManager.Instance.GetCharacter().DiplomacyToAggression = 0.5f + diplomacyAggression;
+        GameManager.Instance.GetCharacter().DiplomacyToAggression = 0.5f - diplomacyAggression;
 
         // Empathy to Ruthlessness
         float empathyRuthlessness = answers[3] + answers[9];
-        GameManager.Instance.GetCharacter().EmpathyToRuthlessness = 0.5f + empathyRuthlessness;
+        GameManager.Instance.GetCharacter().EmpathyToRuthlessness = 0.5f - empathyRuthlessness;
 
         // Optimism to Pessimism
         float optimismPessimism = answers[4] + answers[10];
-        GameManager.Instance.GetCharacter().OptimismToPessimism = 0.5f + optimismPessimism;
+        GameManager.Instance.GetCharacter().OptimismToPessimism = 0.5f - optimismPessimism;
 
         // Mysticism to Skepticism
         float mysticismSkepticism = answers[5] + answers[11] + answers[14];
-        GameManager.Instance.GetCharacter().MysticismToSkepticism = 0.5f + mysticismSkepticism;
+        GameManager.Instance.GetCharacter().MysticismToSkepticism = 0.5f - mysticismSkepticism;
     }
     #endregion
 
