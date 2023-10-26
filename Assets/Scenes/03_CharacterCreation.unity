@@ -2217,7 +2217,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2722,7 +2722,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4813,9 +4813,9 @@ RectTransform:
   m_Father: {fileID: 185490141}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132662772
@@ -4838,10 +4838,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"If a mysterious stranger offers me a tempting deal with unclear consequences,
-    I would demand full transparency before agreeing."
-
-'
+  m_text: "\u201CIf I see a stranger drop a satchel of assorted goods, I would take
+    what I wanted before returning it\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -5034,9 +5032,9 @@ RectTransform:
   m_Father: {fileID: 747279081}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &141185556
@@ -6159,7 +6157,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -6556,7 +6554,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -8069,9 +8067,9 @@ RectTransform:
   m_Father: {fileID: 355990816}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -123}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256969880
@@ -8783,10 +8781,10 @@ RectTransform:
   m_Father: {fileID: 1205520148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 125}
-  m_SizeDelta: {x: 827.93, y: 133.1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -79.9}
+  m_SizeDelta: {x: 827.93, y: 158.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281066409
 MonoBehaviour:
@@ -8808,9 +8806,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"When facing a seemingly insurmountable obstacle, I would maintain optimism,
-    believing in my ability to overcome, rather than succumbing to pessimism and
-    considering giving up."'
+  m_text: "\u201CWhen facing a seemingly insurmountable obstacle, I would remain
+    optimistic and believe in my ability to overcome rather than accept the odds.\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -8980,7 +8977,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -9957,7 +9954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -42.52002, y: -2659.4053}
+  m_AnchoredPosition: {x: -42.52002, y: -405.35025}
   m_SizeDelta: {x: 828.04004, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320002175
@@ -10442,7 +10439,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 375.75}
+  m_SizeDelta: {x: 827.93, y: 321.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &336896752
 CanvasRenderer:
@@ -10526,7 +10523,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 359.57}
+  m_SizeDelta: {x: 827.93, y: 375.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &355990817
 CanvasRenderer:
@@ -12285,7 +12282,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -13098,7 +13095,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -13647,9 +13644,9 @@ RectTransform:
   m_Father: {fileID: 803835429}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &461149066
@@ -13997,9 +13994,9 @@ RectTransform:
   m_Father: {fileID: 1324002038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467967203
@@ -16654,9 +16651,9 @@ RectTransform:
   m_Father: {fileID: 2039942751}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537353940
@@ -16672,6 +16669,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!1 &539776892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539776893}
+  - component: {fileID: 539776895}
+  - component: {fileID: 539776894}
+  m_Layer: 5
+  m_Name: Line 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &539776893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539776892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658992708}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.0153, y: 430.5}
+  m_SizeDelta: {x: 840.89, y: 12.787}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &539776894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539776892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4056604, g: 0.1530162, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &539776895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539776892}
+  m_CullTransparentMesh: 1
 --- !u!1 &540948202
 GameObject:
   m_ObjectHideFlags: 0
@@ -16952,7 +17025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_Color: {r: 0.33962262, g: 0.13978596, b: 0, a: 0.11764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17235,7 +17308,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -17292,9 +17365,9 @@ RectTransform:
   m_Father: {fileID: 177507152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554743457
@@ -17759,9 +17832,9 @@ RectTransform:
   m_Father: {fileID: 1208180197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582676441
@@ -20838,9 +20911,9 @@ RectTransform:
   m_Father: {fileID: 1730941141}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658669885
@@ -21006,9 +21079,9 @@ RectTransform:
   m_Father: {fileID: 336896751}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -120}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668806040
@@ -21442,7 +21515,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 322.89}
+  m_SizeDelta: {x: 827.93, y: 339.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &689751140
 CanvasRenderer:
@@ -22138,9 +22211,9 @@ RectTransform:
   m_Father: {fileID: 689751139}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737267997
@@ -22363,7 +22436,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -22417,7 +22490,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 322.89}
+  m_SizeDelta: {x: 827.93, y: 379.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &747279082
 CanvasRenderer:
@@ -22498,9 +22571,9 @@ RectTransform:
   m_Father: {fileID: 747279081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752695224
@@ -22523,8 +22596,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"In a skirmish with outnumbered allies against bandits, I would charge
-    into the fray to support them, even if it means putting myself at great risk."'
+  m_text: "\u201CIf I come across my allies outnumbered in a skirmish against a large
+    group of bandits, I would charge into the fray to support them, even if it means
+    putting myself at great risk.\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -26140,7 +26214,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -26684,6 +26758,82 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!1 &870940150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870940151}
+  - component: {fileID: 870940153}
+  - component: {fileID: 870940152}
+  m_Layer: 5
+  m_Name: Line 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &870940151
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870940150}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658992708}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.0153, y: -393.07}
+  m_SizeDelta: {x: 840.89, y: 12.952}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &870940152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870940150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40784314, g: 0.15686275, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &870940153
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870940150}
+  m_CullTransparentMesh: 1
 --- !u!1 &876092994
 GameObject:
   m_ObjectHideFlags: 0
@@ -26777,7 +26927,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -27073,7 +27223,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -27183,7 +27333,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -29233,9 +29383,9 @@ RectTransform:
   m_Father: {fileID: 1716487052}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971246692
@@ -29822,6 +29972,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998595198}
+  m_CullTransparentMesh: 1
+--- !u!1 &1000297292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000297293}
+  - component: {fileID: 1000297295}
+  - component: {fileID: 1000297294}
+  m_Layer: 5
+  m_Name: Line 3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1000297293
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000297292}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658992708}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 428.06, y: 18.674}
+  m_SizeDelta: {x: 12.51, y: 836.43}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1000297294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000297292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40784314, g: 0.15686275, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1000297295
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000297292}
   m_CullTransparentMesh: 1
 --- !u!1 &1001198550
 GameObject:
@@ -32795,9 +33021,9 @@ RectTransform:
   m_Father: {fileID: 2039942751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125475496
@@ -32820,9 +33046,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"If a captured enemy pleads for mercy, revealing valuable information,
-    I would spare their life out of empathy rather than eliminating them to prevent
-    future threats."'
+  m_text: "\u201CIf a captured enemy pleads for mercy, begging to see their family
+    again, I would spare their life rather than eliminate them to prevent future
+    threats.\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -34191,7 +34417,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -34377,7 +34603,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: -0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -34503,9 +34729,9 @@ RectTransform:
   m_Father: {fileID: 1730941141}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.729996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181057649
@@ -34528,10 +34754,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"When faced with the unknown and eerie sounds in a dark dungeon, I would
-    press forward eagerly, even if the odds seem against me."
-
-'
+  m_text: "\u201CIf I heard eerie noises coming from a dark hallway in a dungeon
+    I was exploring, I would press forward eagerly.\u201D\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -35462,7 +35686,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 384.29}
+  m_SizeDelta: {x: 827.93, y: 340.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1205520149
 CanvasRenderer:
@@ -36214,7 +36438,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -36434,7 +36658,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -37256,7 +37480,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -38823,9 +39047,9 @@ RectTransform:
   m_Father: {fileID: 1208180197}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343343879
@@ -39001,8 +39225,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1602752641}
   m_HandleRect: {fileID: 1602752640}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.15242128
+  m_Value: 0.50000006
+  m_Size: 0.15316772
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -39138,7 +39362,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -40601,7 +40825,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -41250,9 +41474,9 @@ RectTransform:
   m_Father: {fileID: 1324002038}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440390668
@@ -41361,7 +41585,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -41705,9 +41929,9 @@ RectTransform:
   m_Father: {fileID: 1621529215}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446344420
@@ -42981,7 +43205,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -43723,9 +43947,9 @@ RectTransform:
   m_Father: {fileID: 803835429}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510746878
@@ -44097,7 +44321,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -44360,7 +44584,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -45160,7 +45384,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: -0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -45210,9 +45434,9 @@ RectTransform:
   m_Father: {fileID: 1621529215}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555000983
@@ -45235,8 +45459,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"When encountering a mythical creature guarding a passage, I would attempt
-    to communicate with it peacefully rather than preparing for battle.\"\r"
+  m_text: "\u201CIf I encounter a mythical creature guarding a passage, I would attempt
+    to communicate with it peacefully rather than challenge it to battle.\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -46547,7 +46771,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: -8
-          m_FloatArgument: -0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -46943,9 +47167,9 @@ RectTransform:
   m_Father: {fileID: 1716487052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609731984
@@ -46968,9 +47192,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"If a peculiar-looking merchant claims to sell magical items with extraordinary
-    powers, I would be eager to explore their potential rather than being skeptical
-    about the authenticity of the items."'
+  m_text: "\u201CIf a peculiar-looking merchant claimed to sell magical items with
+    extraordinary powers, I would be skeptical about the authenticity of the items\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -46997,8 +47220,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -48330,7 +48553,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
-          m_FloatArgument: 0.08
+          m_FloatArgument: 0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -48456,9 +48679,9 @@ RectTransform:
   m_Father: {fileID: 177507152}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655356114
@@ -48481,10 +48704,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"If accused of a crime I didn''t commit, I would try to resolve the situation
-    through diplomatic means rather than fighting to prove my innocence."
-
-'
+  m_text: "\u201CIf accused of a crime I didn\u2019t commit, I would try to resolve
+    the situation through peaceful diplomacy rather than aggressive confrontation.\u201D\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -48672,6 +48893,10 @@ RectTransform:
   - {fileID: 992610026}
   - {fileID: 951871082}
   - {fileID: 1200960949}
+  - {fileID: 539776893}
+  - {fileID: 870940151}
+  - {fileID: 1823356441}
+  - {fileID: 1000297293}
   m_Father: {fileID: 1483459870}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48773,7 +48998,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -50806,7 +51031,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 322.89}
+  m_SizeDelta: {x: 827.93, y: 285.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1730941142
 CanvasRenderer:
@@ -51551,9 +51776,9 @@ RectTransform:
   m_Father: {fileID: 2041263050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767892156
@@ -51602,9 +51827,9 @@ RectTransform:
   m_Father: {fileID: 355990816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 111}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -69}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770284082
@@ -52704,6 +52929,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821097249}
   m_CullTransparentMesh: 1
+--- !u!1 &1823356440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823356441}
+  - component: {fileID: 1823356443}
+  - component: {fileID: 1823356442}
+  m_Layer: 5
+  m_Name: Line 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1823356441
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823356440}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658992708}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -410.83, y: 18.674}
+  m_SizeDelta: {x: 9.3493, y: 836.43}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823356442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823356440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40784314, g: 0.15686275, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1823356443
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823356440}
+  m_CullTransparentMesh: 1
 --- !u!1 &1833540037
 GameObject:
   m_ObjectHideFlags: 0
@@ -52987,7 +53288,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
-          m_FloatArgument: 0.08
+          m_FloatArgument: -0.08333
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -53097,7 +53398,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -54348,9 +54649,9 @@ RectTransform:
   m_Father: {fileID: 185490141}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880336043
@@ -54955,9 +55256,9 @@ RectTransform:
   m_Father: {fileID: 2041263050}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901789535
@@ -55413,7 +55714,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -55701,9 +56002,9 @@ RectTransform:
   m_Father: {fileID: 1205520148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -126}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -348, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917930080
@@ -56255,10 +56556,10 @@ RectTransform:
   m_Father: {fileID: 336896751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 120}
-  m_SizeDelta: {x: 827.93, y: 133.1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -78.85}
+  m_SizeDelta: {x: 827.93, y: 154.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1942169027
 MonoBehaviour:
@@ -56280,9 +56581,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"If a wise old sage offers to teach me ancient mystical arts, I would
-    embrace the opportunity with faith in the arcane rather than questioning the
-    legitimacy of such teachings."'
+  m_text: "\u201CIf a wise old sage offered to teach me ancient mystical arts, I
+    would embrace the opportunity to immerse myself in matters of faith and the arcane\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
@@ -56983,7 +57283,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: -0.16
+          m_FloatArgument: -0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -57643,9 +57943,9 @@ RectTransform:
   m_Father: {fileID: 689751139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 94.895004}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000015259, y: -66.104996}
   m_SizeDelta: {x: 827.93, y: 133.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974620211
@@ -58816,7 +59116,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -59504,7 +59804,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 322.89}
+  m_SizeDelta: {x: 827.93, y: 333.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2039942752
 CanvasRenderer:
@@ -59551,7 +59851,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 827.93, y: 322.89}
+  m_SizeDelta: {x: 827.93, y: 332.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2041263051
 CanvasRenderer:
@@ -59865,7 +60165,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -60608,7 +60908,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -61711,7 +62011,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0.16
+          m_FloatArgument: 0.16666
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

@@ -311,14 +311,14 @@ public class ButtonFunctionHelper : MonoBehaviour
     public void Answer5(float val) { answers[4] = val; }
     public void Answer6(float val) { answers[5] = val; }
     public void Answer7(float val) { answers[6] = val; }
-    public void Answer8(float val) { answers[7] = val; }
+    public void Answer8(float val) { answers[7] = -val; }
     public void Answer9(float val) { answers[8] = val; }
     public void Answer10(float val) { answers[9] = val; }
     public void Answer11(float val) { answers[10] = val; }
     public void Answer12(float val) { answers[11] = val; }
     public void Answer13(float val) { answers[12] = val; }
-    public void Answer14(float val) { answers[13] = val; }
-    public void Answer15(float val) { answers[14] = val; }
+    public void Answer14(float val) { answers[13] = -val; }
+    public void Answer15(float val) { answers[14] = -val; }
 
     public void Submit()
     {
