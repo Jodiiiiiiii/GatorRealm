@@ -282,7 +282,7 @@ public class ButtonFunctionHelper : MonoBehaviour
 
             // set position of color picker
             RectTransform rect = _colorPicker.GetComponent<RectTransform>();
-            rect.localPosition = new Vector3(rect.localPosition.x, 
+            rect.localPosition = new Vector3(_colorPicker.GetComponent<ColorPickerPositionData>().GetXPos(colorIndex), 
                 _colorPicker.GetComponent<ColorPickerPositionData>().GetYPos(colorIndex), rect.localPosition.z);
 
             // activate button overlay to close color picker
