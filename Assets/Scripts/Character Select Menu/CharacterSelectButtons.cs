@@ -65,20 +65,20 @@ public class CharacterSelectButtons : MonoBehaviour
         }
         else
         {
-
+            panelManager.SetSelectedIndex(GameManager.Instance.GetCharacterCount() - 1);
         }
         
     }
 
     public void RightNavButton()
     {
-        if (panelManager.GetSelectedIndex() < 7)
+        if (panelManager.GetSelectedIndex() < GameManager.Instance.GetCharacterCount() - 1)
         {
             panelManager.SetSelectedIndex(panelManager.GetSelectedIndex() + 1);
         }
         else
         {
-
+            panelManager.SetSelectedIndex(0);
         }
     }
 
