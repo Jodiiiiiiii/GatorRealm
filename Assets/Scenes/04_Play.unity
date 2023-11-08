@@ -361,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 0, y: 185}
+  m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749313069
 MonoBehaviour:
@@ -384,7 +384,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Take up your sword, put on your helm, and chart the world of GATOR REALM!
+  m_text: 'Thanks for using the GATOR REALM Character Creator!
+
+
+    GATOR REALM
+    isn''t a real game - it''s just a little magic we dreamt up in order to give
+    this experience some context.
+
+
+    We hope that the characters you''ve made
+    inspire you to find your own adventures.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
   m_sharedMaterial: {fileID: -6749058401651971630, guid: d600ad2ac18352c418116759fb7e7be5, type: 2}
