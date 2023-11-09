@@ -23,7 +23,7 @@ public class CharacterDisplay : MonoBehaviour
     [SerializeField] private Image _bodyFill;
     [SerializeField] private Image _hairOutline, _hairFill;
     [SerializeField] private Image _faceOutline;
-    [SerializeField] private Image _shirtOutline, _shirtFill1, _shirtFill2;
+    [SerializeField] private Image _shirtOutline, _shirtFill1, _shirtFill2, _shirtFill3;
     [SerializeField] private Image _pantsOutline, _pantsFill;
     [SerializeField] private Image _shoeOutline, _shoeFill;
 
@@ -85,7 +85,18 @@ public class CharacterDisplay : MonoBehaviour
         _shirtFill2.sprite = _shirtFills2[GameManager.Instance.GetCharacter().ShirtType];
 
         _pantsOutline.sprite = _pantsOutlines[GameManager.Instance.GetCharacter().PantsType];
-        _pantsFill.sprite = _pantsFills[GameManager.Instance.GetCharacter().PantsType];
+        if (GameManager.Instance.GetCharacter().ShirtType == 6)
+        {
+            _shirtFill3.gameObject.SetActive(true);
+            _pantsFill.sprite = _pantsFills[0];
+        } // if robe, then
+
+        else
+        {
+            _shirtFill3.gameObject.SetActive(false);
+            _pantsFill.sprite = _pantsFills[GameManager.Instance.GetCharacter().PantsType];
+        }
+            
 
         _shoeOutline.sprite = _shoeOutlines[GameManager.Instance.GetCharacter().ShoesType];
         _shoeFill.sprite = _shoeFills[GameManager.Instance.GetCharacter().ShoesType];
@@ -97,6 +108,7 @@ public class CharacterDisplay : MonoBehaviour
 
         _shirtFill1.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor1);
         _shirtFill2.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().ShirtColor2);
+        _shirtFill3.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().PantsColor);
 
         _pantsFill.color = HelperFunctions.IntToColor(GameManager.Instance.GetCharacter().PantsColor);
 
