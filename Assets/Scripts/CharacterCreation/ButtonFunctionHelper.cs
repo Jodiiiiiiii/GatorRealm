@@ -346,6 +346,25 @@ public class ButtonFunctionHelper : MonoBehaviour
         float mysticismSkepticism = answers[5] + answers[11] + answers[14];
         GameManager.Instance.GetCharacter().MysticismToSkepticism = 0.5f - mysticismSkepticism;
     }
+
+    [Header("Sliders - Design B")]
+    [SerializeField] Slider _courageCautionSlider;
+    [SerializeField] Slider _honestyDeceptionSlider;
+    [SerializeField] Slider _diplomacyAggressionSlider;
+    [SerializeField] Slider _empathyRuthlessnessSlider;
+    [SerializeField] Slider _optimismPessimismSlider;
+    [SerializeField] Slider _mysticismSkepticismSlider;
+
+    public void SubmitB()
+    {
+        GameManager.Instance.GetCharacter().CourageToCaution = _courageCautionSlider.value;
+        GameManager.Instance.GetCharacter().HonestyToDeception = _honestyDeceptionSlider.value;
+        GameManager.Instance.GetCharacter().DiplomacyToAggression = _diplomacyAggressionSlider.value;
+        GameManager.Instance.GetCharacter().EmpathyToRuthlessness = _empathyRuthlessnessSlider.value;
+        GameManager.Instance.GetCharacter().OptimismToPessimism = _optimismPessimismSlider.value;
+        GameManager.Instance.GetCharacter().MysticismToSkepticism = _mysticismSkepticismSlider.value;
+    }
+
     #endregion
 
     #region STEP 3: FINALIZE / CLASS SELECTION
