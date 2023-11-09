@@ -7,15 +7,15 @@ using TMPro;
 public class SetSliderDescriptor : MonoBehaviour
 {
     [Header("Components")]
-    private Slider _slider;
-    private TextMeshProUGUI _text;
+    [SerializeField] private Slider _slider;
+    [SerializeField] private TextMeshProUGUI _text;
 
     [Header("Text")]
-    private string _veryLeft;
-    private string _littleLeft;
-    private string _neutral;
-    private string _littleRight;
-    private string _veryRight;
+    [SerializeField] private string _veryLeft;
+    [SerializeField] private string _littleLeft;
+    [SerializeField] private string _neutral;
+    [SerializeField] private string _littleRight;
+    [SerializeField] private string _veryRight;
 
     // Update is called once per frame
     void Update()

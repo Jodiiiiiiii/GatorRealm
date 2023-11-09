@@ -587,7 +587,6 @@ public class ButtonFunctionHelper : MonoBehaviour
         _step1.SetActive(false);
         _step2.SetActive(false);
         _step3.SetActive(true);
-        Submit();
         submitScreen.HidePanel();
         raycastBlocker.UIFadeOut();
     }
