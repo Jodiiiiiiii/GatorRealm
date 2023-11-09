@@ -32,12 +32,6 @@ public class CharacterSelectButtons : MonoBehaviour
         deleteScreen = GameObject.Find("Confirm Delete Panel").GetComponent<PanelController>();
     }
 
-    private void OnMouseOver()
-    {
-        //Debug.Log("It work");
-        
-    }
-
     public void BackButton() // Goes back to the main menu
     {
         StopAllCoroutines();
@@ -63,6 +57,30 @@ public class CharacterSelectButtons : MonoBehaviour
         StartCoroutine(DoPlay());
     }
 
+    public void LeftNavButton()
+    {
+        if(panelManager.GetSelectedIndex() > 0)
+        {
+            panelManager.SetSelectedIndex(panelManager.GetSelectedIndex() - 1);
+        }
+        else
+        {
+            panelManager.SetSelectedIndex(GameManager.Instance.GetCharacterCount() - 1);
+        }
+        
+    }
+
+    public void RightNavButton()
+    {
+        if (panelManager.GetSelectedIndex() < GameManager.Instance.GetCharacterCount() - 1)
+        {
+            panelManager.SetSelectedIndex(panelManager.GetSelectedIndex() + 1);
+        }
+        else
+        {
+            panelManager.SetSelectedIndex(0);
+        }
+    }
 
     public void CloseCharaDetailButton() // Pushes the detail window up
     {
